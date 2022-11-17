@@ -134,11 +134,24 @@ require('material').setup({
     cursor_line = true,
     popup_menu = true
   },
-  italics = {
-    comments = true
-  },
   lualine_style = "default", -- can be "stealth" or "default"
+  plugins = {
+    "nvim-tree",
+    "telescope",
+    "indent-blankline"
+  },
   custom_highlights = {
+    ["@type"] = { fg = colors.yellow },
+    ["@type.builtin"] = { fg = colors.yellow },
+    ["@constant.builtin"] = { fg = colors.pink },
+    ["@variable.builtin"] = { fg = colors.error },
+    ["@keyword"] = { fg = colors.purple },
+    ["@keyword.operator"] = { fg = colors.cyan },
+    ["@exception"] = { fg = colors.purple },
+    ["@parameter"] = { fg = colors.orange },
+    ["@parameter.reference"] = { fg = colors.orange },
+    ["@include"] = { fg = colors.purple },
+    ["@property"] = { fg = colors.gray },
     -- CursorLineNr = { fg = colors.accent, bg = colors.bg_alt },
     CursorLineNr = { fg = colors.text, bg = colors.bg_alt },
     -- Cursor = { fg = colors.bg, bg = colors.cursor },
@@ -151,18 +164,6 @@ require('material').setup({
     SpecialChar = { fg = colors.cyan },
     Tag = { fg = '#FF0000' },
     Function = { fg = colors.purple }--]]
-
-    TSKeyword = { fg = colors.purple },
-    TSKeywordFunction = { fg = colors.purple },
-    TSKeywordOperator = { fg = colors.cyan },
-    TSKeywordReturn = { fg = colors.purple },
-    TSParameter = { fg = colors.orange },
-    TSParameterReference = { fg = colors.orange },
-    TSType = { fg = colors.yellow },
-    TSTypeBuiltin = { fg = colors.yellow },
-    TSVariableBuiltin = { fg = colors.error },
-    TSException = { fg = colors.purple },
-    TSInclude = { fg = colors.purple },
 
     NvimTreeFolderName = { fg = colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.accent },
