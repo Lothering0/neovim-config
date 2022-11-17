@@ -334,6 +334,7 @@ highlight CocPumSearch guifg=#84FFFF
 " highlight CocFloatActive guifg=#F78C6C
 highlight CocFloatActive guifg=#84FFFF
 highlight CocMenuSel guibg=#2d324a
+highlight CocFloatThumb guibg=#A6ACCD
 
 " GitGutter highlights
 highlight GitGutterAdd guifg=#ABCF76
