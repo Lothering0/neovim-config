@@ -335,6 +335,11 @@ highlight CocPumSearch guifg=#84FFFF
 highlight CocFloatActive guifg=#84FFFF
 highlight CocMenuSel guibg=#2d324a
 
+" GitGutter highlights
+highlight GitGutterAdd guifg=#ABCF76
+highlight GitGutterChange guifg=#6E98EB
+highlight GitGutterDelete guifg=#DC6068
+
 " BARBAR plugin, changes color of left line (of active buffer/tab)
 " :hi BufferCurrentSign guifg='#84FFFF'
 :hi BufferCurrentSign guifg='#84FFFF'
