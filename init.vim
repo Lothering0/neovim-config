@@ -138,6 +138,7 @@ require('material').setup({
   plugins = {
     "nvim-tree",
     "telescope",
+    "gitsigns",
     "indent-blankline"
   },
   custom_highlights = {
@@ -332,6 +333,7 @@ highlight FgCocErrorFloatBgCocFloating guifg=#FF5370
 highlight CocPumSearch guifg=#84FFFF
 " highlight CocFloatActive guifg=#F78C6C
 highlight CocFloatActive guifg=#84FFFF
+highlight CocMenuSel guibg=#2d324a
 
 " BARBAR plugin, changes color of left line (of active buffer/tab)
 " :hi BufferCurrentSign guifg='#84FFFF'
@@ -374,35 +376,6 @@ hi YankedText guifg=#0F111A guibg=#FFCB6B
 " inoremap <S-Space> <Esc>
 " au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 " au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
-
-" nnoremap <C-n> :NERDTree<CR>
-" nnoremap <C-t> :NERDTreeToggle<CR>
-
-" let NERDTreeMinimalUI = 1
-" let NERDTreeDirArrows = 0
-" let NERDTreeWinSize = 20
-" let NERDTreeDirArrowExpandable = "\u00a0"
-" let NERDTreeDirArrowCollapsible = "\u00a0"
-" let g:NERDTreeStatusline = '%#NonText#'
-
-" Start NERDTree and leave the cursor in it
-" autocmd VimEnter * NERDTree
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" Open the existing NERDTree on each new tab.
-" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-
-" Hide slashes after each dir
-" augroup nerdtreehidetirslashes
-"   autocmd!
-"   autocmd FileType nerdtree syntax match NERDTreeDirSlash #/$# containedin=NERDTreeDir conceal contained
-" augroup end
-
-" Hide path in the first line of the NERDTree
-" augroup nerdtreehidecwd
-"   autocmd!
-"   autocmd FileType nerdtree setlocal conceallevel=3 | syntax match NERDTreeHideCWD #^[</].*$# conceal
-" augroup end
 
 " Git gutter lines
 let g:gitgutter_sign_added = '┃'
