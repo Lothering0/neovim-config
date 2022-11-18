@@ -76,7 +76,8 @@ require('lualine').setup {
   options = { globalstatus = true },
   sections = {
     lualine_c = {},
-    lualine_x = {'filetype'}
+    lualine_x = {},
+    lualine_y = {'filetype'}
   }
 }
 --FIRST Material
