@@ -143,6 +143,8 @@ require('material').setup({
     "indent-blankline"
   },
   custom_highlights = {
+    ["@number"] = { fg = colors.pink },
+    ["@boolean"] = { fg = colors.pink },
     ["@type"] = { fg = colors.yellow },
     ["@type.builtin"] = { fg = colors.yellow },
     ["@constant.builtin"] = { fg = colors.pink },
