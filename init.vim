@@ -1,17 +1,18 @@
-:set number
-:set autoindent
-:set tabstop=2 expandtab
-:set shiftwidth=2 expandtab
-" :set smarttab
-:set softtabstop=2
-:set mouse=a
-:set cursorline
-:set wrap linebreak
-:set breakindent
+set scrolloff=10
+set number
+set autoindent
+set tabstop=2 expandtab
+set shiftwidth=2 expandtab
+" set smarttab
+set softtabstop=2
+set mouse=a
+set cursorline
+set wrap linebreak
+set breakindent
 
 " Highlight whitespaces
-:set listchars+=space:·
-:set list
+set listchars+=space:·
+set list
 
 set termguicolors
 set encoding=utf-8
@@ -351,16 +352,16 @@ highlight GitGutterChange guifg=#6E98EB
 highlight GitGutterDelete guifg=#DC6068
 
 " BARBAR plugin, changes color of left line (of active buffer/tab)
-" :hi BufferCurrentSign guifg='#84FFFF'
-:hi BufferCurrentSign guifg='#84FFFF'
-:hi BufferInactiveSign guifg='#0f111a' guibg='#090B10'
-" :hi BufferTabpageFill guifg='#1a1c25'
-:hi BufferTabpageFill guifg='#0F111A'
-:hi BufferCurrent guifg='#84FFFF'
-:hi BufferInactive guibg='#090B10'
-:hi BufferInactiveMod guibg='#090B10' guifg='#FFCB6B'
-:hi BufferOffset guifg='#090B10' guibg='#090B10'
-:hi BufferTabpageFill guibg='#090B10'
+" hi BufferCurrentSign guifg='#84FFFF'
+hi BufferCurrentSign guifg='#84FFFF'
+hi BufferInactiveSign guifg='#0f111a' guibg='#090B10'
+" hi BufferTabpageFill guifg='#1a1c25'
+hi BufferTabpageFill guifg='#0F111A'
+hi BufferCurrent guifg='#84FFFF'
+hi BufferInactive guibg='#090B10'
+hi BufferInactiveMod guibg='#090B10' guifg='#FFCB6B'
+hi BufferOffset guifg='#090B10' guibg='#090B10'
+hi BufferTabpageFill guibg='#090B10'
 " BARBAR, change symbol of unsaved (modified) file
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.icon_close_tab_modified = '•'
@@ -406,6 +407,38 @@ imap <A-h> <C-y>,
 " Go up/down on "next wrapped line" if current line is too long
 " noremap <expr> j v:count ? 'j' : 'gj'
 " noremap <expr> k v:count ? 'k' : 'gk'
+
+" Center the screen after going to last line
+nnoremap G Gzz
+
+" Not exiting visual mode after tabulating
+vmap > >gv
+vmap < <gv
+
+" Auto indentations after pressing brackets
+inoremap <expr> <cr> 
+   \   getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
+   \ : getline(".")[col(".")-2:col(".")-1]=="()" ? "<cr><esc>O"
+   \ : getline(".")[col(".")-2:col(".")-1]=="[]" ? "<cr><esc>O"
+   \ : getline(".")[col(".")-2:col(".")-1]=="<>" ? "<cr><esc>O"
+   \ :                                             "<cr>"
+
+function! _extendedVersion()
+  inoremap <expr> <cr> 
+     \   getline(".") =~ '\S\s*{$'                 ? "<bs><cr>{<cr>}<esc>O"
+     \ : getline('.') =~ '^\s*{$'                  ? "<cr>}<esc>O" 
+     \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
+     \ : getline(".") =~ '\S\s*($'                 ? "<bs><cr>(<cr>)<esc>O"
+     \ : getline('.') =~ '^\s*($'                  ? "<cr>)<esc>O" 
+     \ : getline(".")[col(".")-2:col(".")-1]=="()" ? "<cr><esc>O"
+     \ : getline(".") =~ '\S\s*[$'                 ? "<bs><cr>[<cr>]<esc>O"
+     \ : getline('.') =~ '^\s*[$'                  ? "<cr>]<esc>O" 
+     \ : getline(".")[col(".")-2:col(".")-1]=="[]" ? "<cr><esc>O"
+     \ : getline(".") =~ '\S\s*<$'                 ? "<bs><cr><<cr>><esc>O"
+     \ : getline('.') =~ '^\s*<$'                  ? "<cr>><esc>O" 
+     \ : getline(".")[col(".")-2:col(".")-1]=="<>" ? "<cr><esc>O"
+     \ :                                             "<cr>"
+endfunction
 
 " Auto close
 " FIRST VARIANT
