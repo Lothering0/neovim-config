@@ -324,14 +324,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 END
 
-" FIRST MATERIAL
 let g:material_style = "deep ocean" " darker / lighter / oceanic / palenight / deep ocean
-" SECOND MATERIAL
-" let g:material_theme_style = 'ocean-community'
-" let g:material_terminal_italics = 1
-" let g:airline_theme = 'nightfly'
 
-" FIRST and SECOND
 colorscheme material
 
 " let g:indentLine_char = ''
@@ -421,9 +415,9 @@ vmap < <gv
 " Auto indentations after pressing brackets
 inoremap <expr> <cr> 
    \   getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
-   \ : getline(".")[col(".")-2:col(".")-1]=="()" ? "<cr><esc>O"
+   \ : getline(".")[col(".")-2:col(".")-1]=="()" ? "<cr><esc>O<tab>"
    \ : getline(".")[col(".")-2:col(".")-1]=="[]" ? "<cr><esc>O"
-   \ : getline(".")[col(".")-2:col(".")-1]=="<>" ? "<cr><esc>O"
+   \ : getline(".")[col(".")-2:col(".")-1]=="<>" ? "<cr><esc>O<tab>"
    \ :                                             "<cr>"
 
 function! _extendedVersion()
@@ -484,6 +478,10 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " default value: 'asdghklqwertyuiopzxcvbnmfj;'
 " also can use: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let g:EasyMotion_keys = "aoeidtn',.pyfgcrl;qjkxbmuh-"
+
+hi EasyMotionTarget guifg='#FF5370' gui='bold'
+hi EasyMotionTarget2First guifg='#FFCC00' gui='bold'
+hi EasyMotionTarget2Second guifg='#E6B455'
 
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-e>'    " replace C-n
