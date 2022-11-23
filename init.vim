@@ -362,6 +362,8 @@ hi BufferInactive guibg='#090B10'
 hi BufferInactiveMod guibg='#090B10' guifg='#FFCB6B'
 hi BufferOffset guifg='#090B10' guibg='#090B10'
 hi BufferTabpageFill guibg='#090B10'
+hi BufferVisible guifg='#84FFFF'
+hi BufferVisibleSign guifg='#84FFFF' guibg='#0F111A'
 " BARBAR, change symbol of unsaved (modified) file
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.icon_close_tab_modified = '•'
