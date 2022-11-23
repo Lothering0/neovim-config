@@ -76,6 +76,21 @@ require('lualine').setup {
   icons_enabled = false,
   options = { globalstatus = true },
   sections = {
+    lualine_a = {
+      {
+        'mode',
+        fmt = function(str)
+          local mode = str:sub(1,1)
+          if mode == "N" then return "ﲵ" end
+          if mode == "I" then return "" end
+          if mode == "V" then return "" end
+          if mode == "R" then return "" end
+          if mode == "O" then return "ﲊ" end
+          if mode == "C" then return "" end
+          return mode
+        end
+      }
+    },
     lualine_c = {},
     lualine_x = {},
     lualine_y = {'filetype'}
