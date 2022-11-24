@@ -494,9 +494,9 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " also can use: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let g:EasyMotion_keys = "aoeidtn',.pyfgcrl;qjkxbmuh-"
 
-hi EasyMotionTarget guifg='#FF5370' gui='bold'
-hi EasyMotionTarget2First guifg='#FFCC00' gui='bold'
-hi EasyMotionTarget2Second guifg='#E6B455'
+" hi EasyMotionTarget guifg='#FF5370' gui='bold'
+" hi EasyMotionTarget2First guifg='#FFCC00' gui='bold'
+" hi EasyMotionTarget2Second guifg='#E6B455'
 
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-e>'    " replace C-n
