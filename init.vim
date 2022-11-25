@@ -1,5 +1,5 @@
-set scrolloff=10
 set number
+set scrolloff=10
 set autoindent
 set tabstop=2 expandtab
 set shiftwidth=2 expandtab
