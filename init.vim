@@ -28,6 +28,8 @@ set noshowmode
 set fillchars+=vert:\ 
 
 set nocompatible
+" vim.opt.updatetime = 300
+set updatetime=300
 
 " Disable quote concealing in JSON files
 let g:vim_json_conceal=0
@@ -60,11 +62,12 @@ Plug 'marko-cerovac/material.nvim'                  " FIRST Material theme
 Plug 'norcalli/nvim-colorizer.lua'                  " Color (hex/rgb) highlight
 Plug 'lukas-reineke/indent-blankline.nvim'          " Highlight indentations
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'p00f/nvim-ts-rainbow'           " TreeSitter brackets pair colorizer
 Plug 'mattn/emmet-vim'                " Emmet
 Plug 'nvim-lua/plenary.nvim'          " Required by Telescope
 Plug 'nvim-telescope/telescope.nvim'  " Telescope (git, explorer)
 Plug 'airblade/vim-gitgutter'         " Git changes file
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-highlight'}
 
 call plug#end()
 
@@ -192,7 +195,8 @@ require('material').setup({
     TelescopeSelection = { fg = colors.accent, bg = colors.selection },
 
     IndentBlanklineChar = { fg = colors.border },
-    IndentBlanklineContextChar = { fg = colors.fg }
+    IndentBlanklineContextChar = { fg = colors.fg },
+    MatchParen = { bg = colors.selection, bold = true }
   }
 })
 
@@ -205,8 +209,14 @@ require'nvim-treesitter.configs'.setup {
   },
   autotag = {
     enable = true
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = false,
+    colors = { colors.yellow, colors.purple, colors.cyan }
   }
 }
+
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = { "node_modules", "dist", ".git/" },
@@ -350,6 +360,7 @@ colorscheme material
 highlight CocFloating guibg=#1F2233
 highlight FgCocErrorFloatBgCocFloating guifg=#FF5370
 highlight CocPumSearch guifg=#84FFFF
+highlight CocPumVirtualText guifg=#464B5D
 " highlight CocFloatActive guifg=#F78C6C
 highlight CocFloatActive guifg=#84FFFF
 highlight CocMenuSel guibg=#2d324a
@@ -505,6 +516,8 @@ let g:VM_maps['Find Subword Under'] = '<C-e>'    " replace visual C-n
 " let g:NERDTreeDirArrowExpandable="📁"
 " let g:NERDTreeDirArrowCollapsible="📂"
 let g:coc_global_extensions = ['coc-tsserver']
+autocmd CursorHold * silent call CocActionAsync('highlight')
+hi CocHighlightText guibg=#1F2233
 
 " Cursor highlight
 " highlight Cursor guifg=white guibg=red

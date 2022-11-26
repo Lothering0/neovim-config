@@ -3,6 +3,7 @@
   "diagnostic.warningSign": "!",
   "diagnostic.infoSign": "i",
   "diagnostic.hintSign": "\uf834",
+  "suggest.virtualText": true,
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de", //  sliders
     "variable": "\ue79b", //  isometric box
@@ -32,4 +33,3 @@
     "default": "\uf29c" //  question mark in circle
   }
 }
-

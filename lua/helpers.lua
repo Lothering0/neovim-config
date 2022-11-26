@@ -7,6 +7,11 @@ function map(mode, key, v, noremap, expr)
   })
 end
 
+augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
 return {
-  map = map
+  map = map,
+  augroup = augroup,
+  autocmd = autocmd
 }
