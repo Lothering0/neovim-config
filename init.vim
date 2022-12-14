@@ -196,7 +196,8 @@ require('material').setup({
 
     IndentBlanklineChar = { fg = colors.border },
     IndentBlanklineContextChar = { fg = colors.fg },
-    MatchParen = { bg = colors.selection, bold = true }
+    -- MatchParen = { bg = colors.selection, bold = true }
+    MatchParen = { bg = colors.selection }
   }
 })
 
@@ -213,6 +214,7 @@ require'nvim-treesitter.configs'.setup {
   rainbow = {
     enable = true,
     extended_mode = false,
+    disable = { "typescript" },
     colors = { colors.yellow, colors.purple, colors.cyan }
   }
 }
@@ -526,3 +528,14 @@ hi CocHighlightText guibg=#1F2233
 " set guicursor+=i:ver100-iCursor
 " set guicursor+=n-v-c:blinkon0
 " set guicursor+=i:blinkwait10
+
+" Neovide
+set guifont=JetBrainsMonoNL\ Nerd\ Font:h11
+let g:neovide_hide_mouse_when_typing = v:true
+let g:neovide_remember_window_size = v:true
+let g:neovide_cursor_trail_size = 0
+let g:neovide_scroll_animation_length = 0.2
+" URxvt.keysym.S-space: \033[32;2u
+" inoremap <S-Space> <Esc>
+" au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
