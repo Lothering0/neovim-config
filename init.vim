@@ -143,14 +143,15 @@ local colors = {
   line_numbers = '#3B3F51',
   highlight =    '#1F2233',
   disabled =     '#464B5D',
-  accent =       '#84FFFF'
+  accent =       '#84FFFF',
+  visual =       '#2d324a'
 }
 
 require('material').setup({
   contrast = {
-    sidebars = true,
-    floating_windows = true,
-    non_current_windows = true,
+    -- sidebars = true,
+    -- floating_windows = true,
+    -- non_current_windows = true,
     cursor_line = true,
     popup_menu = true
   },
@@ -159,7 +160,8 @@ require('material').setup({
     "nvim-tree",
     "telescope",
     "gitsigns",
-    "indent-blankline"
+    "indent-blankline",
+    "nvim-web-devicons"
   },
   custom_highlights = {
     ["@number"] = { fg = colors.pink },
@@ -178,7 +180,7 @@ require('material').setup({
     -- CursorLineNr = { fg = colors.accent, bg = colors.bg_alt },
     CursorLineNr = { fg = colors.text, bg = colors.bg_alt },
     -- Cursor = { fg = colors.bg, bg = colors.cursor },
-    Visual = { fg = colors.none, bg = "#2d324a" },
+    Visual = { fg = colors.none, bg = colors.visual },
     --[[Type = { fg = colors.yellow },
     StorageClass = { fg = colors.yellow },
     Structure = { fg = colors.purple },
@@ -190,6 +192,7 @@ require('material').setup({
 
     NvimTreeFolderName = { fg = colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.accent },
+    NvimTreeCursorLine = { bg = colors.bg },
 
     TelescopeSelectionCaret = { fg = colors.accent },
     TelescopeSelection = { fg = colors.accent, bg = colors.selection },
@@ -307,6 +310,14 @@ require("indent_blankline").setup {
   } --]]
 }
 
+require("bufferline").setup({
+  icon_close_tab_modified = '•',
+  icon_custom_colors = false,
+  offsets = {
+    {filetype = "NvimTree", text = "File Explorer", text_align = "center"}
+  },
+})
+
 -- Scopes for indentations highlighter
 vim.g.indent_blankline_context_patterns = {
   'class',
@@ -376,20 +387,19 @@ highlight GitGutterDelete guifg=#DC6068
 " BARBAR plugin, changes color of left line (of active buffer/tab)
 " hi BufferCurrentSign guifg='#84FFFF'
 hi BufferCurrentSign guifg='#84FFFF'
-hi BufferInactiveSign guifg='#0f111a' guibg='#090B10'
+hi BufferInactiveSign guifg='#0F111A' guibg='#0F111A'
 " hi BufferTabpageFill guifg='#1a1c25'
-hi BufferTabpageFill guifg='#0F111A'
+hi BufferTabpageFill guifg='#0F111A' guibg='#0F111A'
+" hi BufferTabpageFill guifg='#0F111A' guibg='#1F2233'
 hi BufferCurrent guifg='#84FFFF'
-hi BufferInactive guibg='#090B10'
-hi BufferInactiveMod guibg='#090B10' guifg='#FFCB6B'
-hi BufferOffset guifg='#090B10' guibg='#090B10'
-hi BufferTabpageFill guibg='#090B10'
+hi BufferInactive guibg='#0F111A'
+hi BufferInactiveMod guibg='#0F111A' guifg='#FFCB6B'
+hi BufferOffset guifg='#0F111A' guibg='#0F111A'
 hi BufferVisible guifg='#84FFFF'
 hi BufferVisibleSign guifg='#84FFFF' guibg='#0F111A'
 hi BufferVisibleMod guifg='#FFCB6B'
 " BARBAR, change symbol of unsaved (modified) file
 let bufferline = get(g:, 'bufferline', {})
-let bufferline.icon_close_tab_modified = '•'
 " BARBAR, change symbol of separators
 " let bufferline.icon_separator_active = ''
 " let bufferline.icon_separator_inactive = ''
@@ -481,8 +491,8 @@ inoremap { {}<left>
 " nnoremap <F8> :tabnext<CR>
 
 " Switching between BARBAR tabs
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
+nnoremap <silent>    H :BufferPrevious<CR>
+nnoremap <silent>    L :BufferNext<CR>
 
 " Close BARBAR tab
 nnoremap <silent>    <A-w> :BufferClose<CR>
