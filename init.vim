@@ -177,6 +177,7 @@ require('material').setup({
     ["@parameter.reference"] = { fg = colors.orange },
     ["@include"] = { fg = colors.purple },
     ["@property"] = { fg = colors.gray },
+    ["@type.qualifier"] = { fg = colors.purple },
     -- CursorLineNr = { fg = colors.accent, bg = colors.bg_alt },
     CursorLineNr = { fg = colors.text, bg = colors.bg_alt },
     -- Cursor = { fg = colors.bg, bg = colors.cursor },
@@ -215,7 +216,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
   rainbow = {
-    enable = true,
+    enable = false,
     extended_mode = false,
     disable = { "typescript" },
     colors = { colors.yellow, colors.purple, colors.cyan }
