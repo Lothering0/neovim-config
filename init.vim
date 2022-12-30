@@ -138,10 +138,10 @@ require('lualine').setup {
         fmt = function(str)
           local mode = str:sub(1,1)
           if mode == "N" then
-            set_CursorLineNr_color(colors.accent)
+            set_CursorLineNr_color(colors.cyan)
             return "ﲵ" end
           if mode == "I" then
-            set_CursorLineNr_color(colors.darkgreen)
+            set_CursorLineNr_color(colors.green)
             return ""
           end
           if mode == "V" then
