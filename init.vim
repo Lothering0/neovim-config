@@ -155,7 +155,7 @@ require('material').setup({
     cursor_line = true,
     popup_menu = true
   },
-  lualine_style = "default", -- can be "stealth" or "default"
+  lualine_style = "stealth", -- can be "stealth" or "default"
   plugins = {
     "nvim-tree",
     "telescope",
