@@ -532,6 +532,8 @@ nnoremap <A-t> <Plug>(coc-type-definition)
 nnoremap <A-d> <Plug>(coc-definition)
 " Show suggestion window
 inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " default value: 'asdghklqwertyuiopzxcvbnmfj;'
 " also can use: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
