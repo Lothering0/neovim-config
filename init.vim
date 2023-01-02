@@ -61,6 +61,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multi cursor
 Plug 'marko-cerovac/material.nvim'                  " FIRST Material theme
 Plug 'norcalli/nvim-colorizer.lua'                  " Color (hex/rgb) highlight
 Plug 'lukas-reineke/indent-blankline.nvim'          " Highlight indentations
+Plug 'lukas-reineke/virt-column.nvim'               " Set symbol on certain column
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow'           " TreeSitter brackets pair colorizer
 Plug 'mattn/emmet-vim'                " Emmet
@@ -217,10 +218,16 @@ require('material').setup({
     TelescopeSelectionCaret = { fg = colors.accent },
     TelescopeSelection = { fg = colors.accent, bg = colors.selection },
 
-    IndentBlanklineChar = { fg = colors.border },
+    IndentBlanklineChar = { fg = colors.active },
     IndentBlanklineContextChar = { fg = colors.fg },
     -- MatchParen = { bg = colors.selection, bold = true }
-    MatchParen = { bg = colors.selection }
+    MatchParen = { bg = colors.selection },
+    ColorColumn = { bg = colors.bg },
+    VirtColumn = { fg = colors.active },
+    IndentBlanklineSpaceChar = { fg = colors.active, nocombine = true },
+    IndentBlanklineContextSpaceChar = { fg = colors.active, nocombine = true },
+    Whitespace = { fg = colors.active },
+    YankedText = { fg = colors.bg, bg = colors.yellow }
   }
 })
 
@@ -318,6 +325,11 @@ require("nvim-tree").setup({
       },
     },
   },
+})
+
+vim.opt.colorcolumn = { 81 }
+require("virt-column").setup({
+  char = "│"
 })
 
 require("indent_blankline").setup {
@@ -434,14 +446,6 @@ let g:indent_blankline_char_list = ['│', '╎', '┆', '┊']
 " highlight IndentBlanklineContextChar guifg=#FF5370 gui=nocombine
 " From description: Turn this off if you want to use background highlighting instead of chars
 let g:indent_blankline_show_trailing_blankline_indent = v:false
-
-" Highlight space char
-hi IndentBlanklineSpaceChar guifg=#232637 gui=nocombine
-hi IndentBlanklineContextSpaceChar guifg=#232637 gui=nocombine
-hi Whitespace guifg=#232637
-
-" Set color to yanked text
-hi YankedText guifg=#0F111A guibg=#FFCB6B
 
 " URxvt.keysym.S-space: \033[32;2u
 " inoremap <S-Space> <Esc>
