@@ -327,9 +327,10 @@ require("nvim-tree").setup({
   },
 })
 
-vim.opt.colorcolumn = { 81 }
+-- vim.opt.colorcolumn = { 81 }
 require("virt-column").setup({
-  char = "│"
+  char = "│",
+  virtcolumn = "81"
 })
 
 require("indent_blankline").setup {
