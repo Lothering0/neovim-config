@@ -227,6 +227,7 @@ require('material').setup({
     IndentBlanklineSpaceChar = { fg = colors.active, nocombine = true },
     IndentBlanklineContextSpaceChar = { fg = colors.active, nocombine = true },
     Whitespace = { fg = colors.active },
+    NonText = { fg = colors.active },
     YankedText = { fg = colors.bg, bg = colors.yellow }
   }
 })
@@ -333,6 +334,7 @@ require("virt-column").setup({
   virtcolumn = "81"
 })
 
+vim.opt.listchars:append "eol:↴"
 require("indent_blankline").setup {
   -- for example, context is off by default, use this to turn it on
   show_current_context = true,
