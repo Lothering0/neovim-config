@@ -69,6 +69,8 @@ Plug 'nvim-lua/plenary.nvim'          " Required by Telescope
 Plug 'nvim-telescope/telescope.nvim'  " Telescope (git, explorer)
 Plug 'airblade/vim-gitgutter'         " Git changes file
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-highlight'}
+Plug 'folke/noice.nvim'               " Plugin which replace native Neovim command line
+Plug 'MunifTanjim/nui.nvim'           " Required by Noice
 
 call plug#end()
 
@@ -395,6 +397,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end
 })
+
+require("noice").setup()
 END
 
 let g:material_style = "deep ocean" " darker / lighter / oceanic / palenight / deep ocean
