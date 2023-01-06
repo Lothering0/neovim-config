@@ -125,7 +125,7 @@ local colors = {
 
 function set_CursorLineNr_color(color, bg_color)
   bg = bg_color or colors.bg_alt
-  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = color, bg = bg })
+  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = color, bg = bg, bold = true })
 end
 
 require'colorizer'.setup()
