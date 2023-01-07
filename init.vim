@@ -268,7 +268,8 @@ require("nvim-tree").setup({
   open_on_setup = true,
   open_on_setup_file = true,
   filters = {
-    dotfiles = true
+    dotfiles = false,
+    exclude = { "" }
   },
   view = {
     width = 20,
@@ -291,6 +292,7 @@ require("nvim-tree").setup({
         none = "│",
       },
     }, --]]
+    highlight_git = true,
     indent_markers = {
       enable = true,
       inline_arrows = true,
