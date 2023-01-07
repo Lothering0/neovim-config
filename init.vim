@@ -293,8 +293,9 @@ require("nvim-tree").setup({
       },
     }, --]]
     highlight_git = true,
+    indent_width = 2,
     indent_markers = {
-      enable = true,
+      enable = false,
       inline_arrows = true,
       icons = {
         corner = "",
@@ -303,6 +304,14 @@ require("nvim-tree").setup({
         bottom = "",
         none = "",
       },
+    },
+    special_files = {
+      "tsconfig.json",
+      "package.json",
+      "Cargo.toml",
+      "Makefile",
+      "README.md",
+      "readme.md"
     },
     icons = {
       -- use one space as value if current font is full mono
