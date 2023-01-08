@@ -1,4 +1,4 @@
 require("plugins/packer")
-require("plugins/config")
+require("plugins/configs/init")
 require("plugins/options")
 require("plugins/mappings")
