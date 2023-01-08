@@ -1,6 +1,7 @@
-local g = vim.g
-local o = vim.opt
-local c = vim.cmd
+local helpers = require("helpers")
+local g = helpers.g
+local o = helpers.o
+local c = helpers.c
 
 -- g.mapleader = " "
 o.number = true
@@ -26,3 +27,4 @@ c "set noshowmode"
 -- o.nocompatible = true
 -- Hide separator line
 o.fillchars:append({ vert = " " })
+o.updatetime = 300

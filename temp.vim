@@ -186,6 +186,7 @@ require('material').setup({
     "nvim-web-devicons"
   },
   custom_highlights = {
+    -- TreeSitter
     ["@number"] = { fg = colors.pink },
     ["@boolean"] = { fg = colors.pink },
     ["@type"] = { fg = colors.yellow },
@@ -213,24 +214,65 @@ require('material').setup({
     Tag = { fg = '#FF0000' },
     Function = { fg = colors.purple }--]]
 
+    -- NvimTree
     NvimTreeFolderName = { fg = colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.accent },
     NvimTreeCursorLine = { bg = colors.bg },
 
+    -- Telescope
     TelescopeSelectionCaret = { fg = colors.accent },
     TelescopeSelection = { fg = colors.accent, bg = colors.selection },
 
+    -- IndentBlankLine
     IndentBlanklineChar = { fg = colors.active },
     IndentBlanklineContextChar = { fg = colors.fg },
+    IndentBlanklineSpaceChar = { fg = colors.active, nocombine = true },
+    IndentBlanklineContextSpaceChar = { fg = colors.active, nocombine = true },
+
+    -- Other
     -- MatchParen = { bg = colors.selection, bold = true }
     MatchParen = { bg = colors.selection },
     ColorColumn = { bg = colors.bg },
     VirtColumn = { fg = colors.active },
-    IndentBlanklineSpaceChar = { fg = colors.active, nocombine = true },
-    IndentBlanklineContextSpaceChar = { fg = colors.active, nocombine = true },
     Whitespace = { fg = colors.active },
     NonText = { fg = colors.active },
-    YankedText = { fg = colors.bg, bg = colors.yellow }
+    YankedText = { fg = colors.bg, bg = colors.yellow },
+
+    -- CoC Server
+    CocFloating = { bg = colors.selection },
+    FgCocErrorFloatBgCocFloating = { fg = colors.error },
+    CocPumSearch = { fg = colors.accent },
+    CocPumVirtualText = { fg = colors.comments },
+    -- CocFloatActive = { fg = colors.orange },
+    CocFloatActive = { fg = colors.accent },
+    CocMenuSel = { bg = colors.visual },
+    CocFloatThumb = { bg = colors.fg },
+    CocHighlightText = { bg = colors.selection },
+
+    -- GitGutter highlights
+    GitGutterAdd = { fg = colors.darkgreen },
+    GitGutterChange = { fg = colors.darkblue },
+    GitGutterDelete = { fg = colors.darkred },
+
+    -- BARBAR
+    -- BufferCurrentSign = { fg = colors.accent },
+    BufferCurrentSign = { fg = colors.accent },
+    BufferInactiveSign = { fg = colors.bg, bg = colors.bg },
+    -- BufferTabpageFill = { fg = #1a1c25 },
+    BufferTabpageFill = { fg = colors.bg, bg = colors.bg },
+    -- BufferTabpageFill = { fg = colors.bg, bg = colors.selection },
+    BufferCurrent = { fg = colors.accent },
+    BufferInactive = { bg = colors.bg },
+    BufferInactiveMod = { bg = colors.bg, fg = colors.yellow },
+    BufferOffset = { fg = colors.bg, bg = colors.bg },
+    BufferVisible = { fg = colors.accent },
+    BufferVisibleSign = { fg = colors.accent, bg = colors.bg },
+    BufferVisibleMod = { fg = colors.yellow },
+
+    -- EasyMotion
+    -- EasyMotionTarget = { fg = colors.error, bold = true },
+    -- EasyMotionTarget2First = { fg = colors.cursor, bold = true },
+    -- EasyMotionTarget2Second = { fg = colors.darkyellow }
   }
 })
 
@@ -419,35 +461,6 @@ colorscheme material
 " let g:indentLine_char = ''
 " let g:indentLine_char = '|'
 
-" CoC Server change colors
-highlight CocFloating guibg=#1F2233
-highlight FgCocErrorFloatBgCocFloating guifg=#FF5370
-highlight CocPumSearch guifg=#84FFFF
-highlight CocPumVirtualText guifg=#464B5D
-" highlight CocFloatActive guifg=#F78C6C
-highlight CocFloatActive guifg=#84FFFF
-highlight CocMenuSel guibg=#2d324a
-highlight CocFloatThumb guibg=#A6ACCD
-
-" GitGutter highlights
-highlight GitGutterAdd guifg=#ABCF76
-highlight GitGutterChange guifg=#6E98EB
-highlight GitGutterDelete guifg=#DC6068
-
-" BARBAR plugin, changes color of left line (of active buffer/tab)
-" hi BufferCurrentSign guifg='#84FFFF'
-hi BufferCurrentSign guifg='#84FFFF'
-hi BufferInactiveSign guifg='#0F111A' guibg='#0F111A'
-" hi BufferTabpageFill guifg='#1a1c25'
-hi BufferTabpageFill guifg='#0F111A' guibg='#0F111A'
-" hi BufferTabpageFill guifg='#0F111A' guibg='#1F2233'
-hi BufferCurrent guifg='#84FFFF'
-hi BufferInactive guibg='#0F111A'
-hi BufferInactiveMod guibg='#0F111A' guifg='#FFCB6B'
-hi BufferOffset guifg='#0F111A' guibg='#0F111A'
-hi BufferVisible guifg='#84FFFF'
-hi BufferVisibleSign guifg='#84FFFF' guibg='#0F111A'
-hi BufferVisibleMod guifg='#FFCB6B'
 " BARBAR, change symbol of unsaved (modified) file
 let bufferline = get(g:, 'bufferline', {})
 " BARBAR, change symbol of separators
@@ -458,10 +471,6 @@ let bufferline = get(g:, 'bufferline', {})
 let g:indent_blankline_use_treesitter = v:true
 " let g:indent_blankline_char_list = ['▏', '¦', '┆', '┊']
 let g:indent_blankline_char_list = ['│', '╎', '┆', '┊']
-" highlight IndentBlanklineIndent1 guifg=#84FFFF gui=nocombine
-" highlight IndentBlanklineIndent2 guifg=#C792EA gui=nocombine
-" highlight IndentBlanklineIndent3 guifg=#FFCB6B gui=nocombine
-" highlight IndentBlanklineContextChar guifg=#FF5370 gui=nocombine
 " From description: Turn this off if you want to use background highlighting instead of chars
 let g:indent_blankline_show_trailing_blankline_indent = v:false
 
@@ -561,27 +570,12 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 " also can use: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let g:EasyMotion_keys = "aoeidtn',.pyfgcrl;qjkxbmuh-"
 
-" hi EasyMotionTarget guifg='#FF5370' gui='bold'
-" hi EasyMotionTarget2First guifg='#FFCC00' gui='bold'
-" hi EasyMotionTarget2Second guifg='#E6B455'
-
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-e>'    " replace C-n
 let g:VM_maps['Find Subword Under'] = '<C-e>'    " replace visual C-n
 
-" let g:NERDTreeDirArrowExpandable="📁"
-" let g:NERDTreeDirArrowCollapsible="📂"
 let g:coc_global_extensions = ['coc-tsserver']
 autocmd CursorHold * silent call CocActionAsync('highlight')
-hi CocHighlightText guibg=#1F2233
-
-" Cursor highlight
-" highlight Cursor guifg=white guibg=red
-" highlight iCursor guifg=white guibg=steelblue
-" set guicursor=n-v-c:block-Cursor
-" set guicursor+=i:ver100-iCursor
-" set guicursor+=n-v-c:blinkon0
-" set guicursor+=i:blinkwait10
 
 " Neovide
 set guifont=JetBrainsMonoNL\ Nerd\ Font:h11

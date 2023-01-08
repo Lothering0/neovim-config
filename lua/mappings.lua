@@ -9,7 +9,7 @@ map("i", "<A-h>", "<C-y>,", false)
 
 -- Not exiting visual mode after tabulating
 map("v", ">", ">gv", false)
-map("v", ">", ">gv", false)
+map("v", "<", "<gv", false)
 
 -- Autoclose brackets
 map("i", '"', '""<left>')
