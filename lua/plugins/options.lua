@@ -16,11 +16,6 @@ g.neovide_remember_window_size = true
 g.neovide_cursor_trail_size = 0
 g.neovide_scroll_animation_length = 0.2
 
-g.indent_blankline_use_treesitter = true
-g.indent_blankline_char_list = { '│', '╎', '┆', '┊' }
--- From description: Turn this off if you want to use background highlighting instead of chars
-g.indent_blankline_show_trailing_blankline_indent = true
-
 -- Git gutter lines
 g.gitgutter_sign_added = '┃'
 g.gitgutter_sign_modified = '┃'

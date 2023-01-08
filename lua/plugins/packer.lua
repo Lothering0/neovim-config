@@ -10,7 +10,7 @@ return require("packer").startup(function()
   use { "kyazdani42/nvim-web-devicons" }                 -- Another icons
   use { "kyazdani42/nvim-tree.lua" }                     -- Explorer
   use { "romgrk/barbar.nvim" }                           -- Tabs
-  use { "https://github.com/easymotion/vim-easymotion" } -- EasyMotion
+  use { "easymotion/vim-easymotion" } -- EasyMotion
   use { "mg979/vim-visual-multi", branch = "master" } -- Multi cursor
   use { "marko-cerovac/material.nvim" }                  -- FIRST Material theme
   use { "norcalli/nvim-colorizer.lua" }                  -- Color (hex/rgb) highlight

@@ -1,4 +1,8 @@
-vim.opt.listchars:append "eol:↴"
+local helpers = require("helpers")
+local o = helpers.o
+local g = helpers.g
+
+o.listchars:append "eol:↴"
 require("indent_blankline").setup {
   -- for example, context is off by default, use this to turn it on
   show_current_context = true,
@@ -10,7 +14,7 @@ require("indent_blankline").setup {
 }
 
 -- Scopes for indentations highlighter
-vim.g.indent_blankline_context_patterns = {
+g.indent_blankline_context_patterns = {
   'class',
   'function',
   'method',
@@ -23,4 +27,7 @@ vim.g.indent_blankline_context_patterns = {
   'arguments'
 }
 
-
+g.indent_blankline_use_treesitter = true
+g.indent_blankline_char_list = { '│', '╎', '┆', '┊' }
+-- From description: Turn this off if you want to use background highlighting instead of chars
+g.indent_blankline_show_trailing_blankline_indent = false
