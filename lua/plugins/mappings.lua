@@ -1,8 +1,10 @@
 local helpers = require("helpers")
 local map = helpers.map
+local c = helpers.c
 
 -- Emmet trigger
-map("i", "<A-h>", "<C-y>,", false)
+c "imap <A-h> <C-y>,"
+-- map("i", "<A-h>", "<C-y>,", false, false)
 
 -- Switching between BARBAR tabs
 map("n", "H", ":BufferPrevious<CR>")

@@ -15,10 +15,10 @@ augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 return {
-  map = map,
-  augroup = augroup,
-  autocmd = autocmd,
   g = g,
   o = o,
-  c = c
+  c = c,
+  map = map,
+  augroup = augroup,
+  autocmd = autocmd
 }

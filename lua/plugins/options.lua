@@ -15,7 +15,18 @@ g.neovide_hide_mouse_when_typing = true
 g.neovide_remember_window_size = true
 g.neovide_cursor_trail_size = 0
 g.neovide_scroll_animation_length = 0.2
--- URxvt.keysym.S-space: \033[32;2u
--- inoremap <S-Space> <Esc>
--- au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
--- au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+g.indent_blankline_use_treesitter = true
+g.indent_blankline_char_list = { '│', '╎', '┆', '┊' }
+-- From description: Turn this off if you want to use background highlighting instead of chars
+g.indent_blankline_show_trailing_blankline_indent = true
+
+-- Git gutter lines
+g.gitgutter_sign_added = '┃'
+g.gitgutter_sign_modified = '┃'
+-- let g:gitgutter_sign_removed = '┃'
+g.gitgutter_sign_removed_first_line = '┃'
+g.gitgutter_sign_removed_above_and_below = '┃'
+g.gitgutter_sign_modified_removed = '┃'
+
+g.EasyMotion_keys = "aoeidtn',.pyfgcrl;qjkxbmuh-"
