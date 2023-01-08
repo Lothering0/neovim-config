@@ -1,5 +1,2 @@
-require("options")
-require("mappings")
+require("editor/init")
 require("plugins/init")
-require("plugins/config")
-require("plugins/options")
