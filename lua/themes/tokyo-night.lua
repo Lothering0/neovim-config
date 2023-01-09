@@ -8,9 +8,9 @@ return {
   gray =     '#717CB4',
   black =    '#000000',
   red =      '#F07178',
-  green =    '#C3E88D',
+  green =    '#9ece6a',
   yellow =   '#E0AF68',
-  blue =     '#82AAFF',
+  blue =     '#7aa2f7',
   paleblue = '#B0C9FF',
   cyan =     '#50B6B9',
   purple =   '#F7768E',
@@ -19,9 +19,9 @@ return {
 
   -- Dark colors
   darkred =    '#d73a55',
-  darkgreen =  '#ABCF76',
+  darkgreen =  '#9ece6a',
   darkyellow = '#E6B455',
-  darkblue =   '#6E98EB',
+  darkblue =   '#7aa2f7',
   darkcyan =   '#50B6B9',
   darkpurple = '#B480D6',
   darkorange = '#E2795B',
@@ -49,8 +49,8 @@ return {
   visual =       '#2d324a',
 
   git = {
-    added = '#50B6B9',
-    modified = '#6E98EB',
+    added = '#9ece6a',
+    modified = '#7aa2f7',
     removed = '#d73a55'
   }
 }
