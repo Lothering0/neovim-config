@@ -16,12 +16,4 @@ g.neovide_remember_window_size = true
 g.neovide_cursor_trail_size = 0
 g.neovide_scroll_animation_length = 0.2
 
--- Git gutter lines
-g.gitgutter_sign_added = '┃'
-g.gitgutter_sign_modified = '┃'
--- let g:gitgutter_sign_removed = '┃'
-g.gitgutter_sign_removed_first_line = '┃'
-g.gitgutter_sign_removed_above_and_below = '┃'
-g.gitgutter_sign_modified_removed = '┃'
-
 g.EasyMotion_keys = "aoeidtn',.pyfgcrl;qjkxbmuh-"
