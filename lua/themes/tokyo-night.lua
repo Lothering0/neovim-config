@@ -13,8 +13,8 @@ return {
   blue =     '#7aa2f7',
   paleblue = '#B0C9FF',
   cyan =     '#50B6B9',
-  purple =   '#F7768E',
-  orange =   '#F78C6C',
+  purple =   '#B480D6',
+  orange =   '#F7768E',
   pink =     '#FF9CAC',
 
   -- Dark colors
@@ -24,7 +24,7 @@ return {
   darkblue =   '#7aa2f7',
   darkcyan =   '#50B6B9',
   darkpurple = '#B480D6',
-  darkorange = '#E2795B',
+  darkorange = '#FF9CAC',
 
   error =  '#d73a55',
   link =   '#80CBC4',
