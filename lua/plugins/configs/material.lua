@@ -16,6 +16,26 @@ require('material').setup({
     "indent-blankline",
     "nvim-web-devicons"
   },
+  custom_colors = function(clrs)
+    if colors.meta.name == "material" then return end
+
+    clrs.editor.bg = colors.bg
+
+    clrs.backgrounds.sidebars = colors.bg
+    clrs.backgrounds.floating_windows = colors.bg
+    clrs.backgrounds.non_current_windows = colors.bg
+    clrs.backgrounds.cursor_line = colors.bg_alt
+
+    clrs.git.added = colors.darkgreen
+
+    for key, value in pairs(clrs.main) do
+      clrs.main[key] = colors[key]
+    end
+
+    for key, value in pairs(clrs.editor) do
+      clrs.editor[key] = colors[key]
+    end
+  end,
   custom_highlights = {
     -- TreeSitter
     ["@number"] = { fg = colors.pink },
@@ -81,9 +101,9 @@ require('material').setup({
     CocHighlightText = { bg = colors.selection },
 
     -- GitGutter highlights
-    GitGutterAdd = { fg = colors.darkgreen },
-    GitGutterChange = { fg = colors.darkblue },
-    GitGutterDelete = { fg = colors.darkred },
+    GitGutterAdd = { fg = colors.git.added },
+    GitGutterChange = { fg = colors.git.modified },
+    GitGutterDelete = { fg = colors.git.removed },
 
     -- BARBAR
     -- BufferCurrentSign = { fg = colors.accent },
