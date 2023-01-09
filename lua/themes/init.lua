@@ -1,2 +1,2 @@
 -- Curent theme
-return require("themes/material_deep_ocean")
+return require("themes/tokyo-night")
