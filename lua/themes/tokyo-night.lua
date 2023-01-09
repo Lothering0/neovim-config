@@ -40,7 +40,7 @@ return {
   selection =    '#1F2233',
   contrast =     '#090B10',
   -- active =       '#11121A',
-  active =       '#0f0f15',
+  active =       '#22222b',
   border =       '#232637',
   line_numbers = '#3B3F51',
   highlight =    '#1F2233',
