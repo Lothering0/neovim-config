@@ -52,6 +52,7 @@ require('material').setup({
     ["@include"] = { fg = colors.purple },
     ["@property"] = { fg = colors.gray },
     ["@type.qualifier"] = { fg = colors.purple },
+    ["@operator"] = { fg = colors.cyan },
     -- CursorLineNr = { fg = colors.accent, bg = colors.bg_alt },
     CursorLineNr = { fg = colors.text, bg = colors.bg_alt },
     -- Cursor = { fg = colors.bg, bg = colors.cursor },
