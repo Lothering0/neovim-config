@@ -39,6 +39,29 @@ require('lualine').setup {
     },
     lualine_c = {},
     lualine_x = {},
-    lualine_y = {'filetype'}
+    lualine_y = {
+      {
+        "filetype",
+        fmt = function(lang)
+          if lang == "html" then return "HTML" end
+          if lang == "css" then return "CSS" end
+          if lang == "sass" then return "Sass" end
+          if lang == "scss" then return "SCSS" end
+          if lang == "javascript" then return "JavaScript" end
+          if lang == "typescript" then return "TypeScript" end
+          if lang == "json" then return "JSON" end
+          if lang == "vue" then return "Vue" end
+          if lang == "javascriptreact" then return "JS React" end
+          if lang == "typescriptreact" then return "TS React" end
+          if lang == "lua" then return "Lua" end
+          if lang == "python" then return "Python" end
+          if lang == "markdown" then return "Markdown" end
+          if lang == "cpp" then return "C++" end
+          if lang == "c" then return "C" end
+          if lang == "php" then return "PHP" end
+          return lang
+        end
+      }
+    }
   }
 }
