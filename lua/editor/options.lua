@@ -22,6 +22,8 @@ o.breakindent = true
 o.listchars:append({ space = "·" })
 o.list = true
 o.termguicolors = true
+o.ignorecase = true
+o.signcolumn = "yes"
 o.encoding = "utf-8"
 -- Hide empty lines ~
 o.fillchars = "eob: "
