@@ -125,5 +125,11 @@ require('material').setup({
     -- EasyMotionTarget = { fg = colors.error, bold = true },
     -- EasyMotionTarget2First = { fg = colors.cursor, bold = true },
     -- EasyMotionTarget2Second = { fg = colors.darkyellow }
+
+    -- Noice
+    NoiceCmdlinePopupBorder = { fg = colors.border },
+    -- NoiceCmdlineIcon = { fg = colors.cyan },
+    NoiceCmdlinePopupBorderSearch = { fg = colors.darkyellow },
+    NoiceCmdlineIconSearch = { fg = colors.darkyellow }
   }
 })
