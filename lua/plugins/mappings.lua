@@ -10,6 +10,9 @@ c "imap <A-h> <C-y>,"
 map("n", "H", ":BufferPrevious<CR>")
 map("n", "L", ":BufferNext<CR>")
 map("n", "<A-w>", ":BufferClose<CR>")    -- Close BARBAR tab
+-- Move BARBAR tabs
+map("n", "<C-H>", ":BufferMovePrevious<CR>")
+map("n", "<C-L>", ":BufferMoveNext<CR>")
 
 -- Find files using Telescope command-line sugar.
 -- By file name
