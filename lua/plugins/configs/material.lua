@@ -70,6 +70,7 @@ require('material').setup({
     NvimTreeFolderName = { fg = colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.accent },
     NvimTreeCursorLine = { bg = colors.bg },
+    NvimTreeIndentMarker = { fg = colors.border },
 
     -- Telescope
     TelescopeSelectionCaret = { fg = colors.accent },
