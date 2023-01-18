@@ -44,3 +44,17 @@ local space_map_conditions = table.concat({
 }, " : ")
 local space_map_expression = space_map_conditions .. ' : "<Space>"'
 map("i", "<Space>", space_map_expression, true, true)
+
+-- Backspace
+local backspace_map_condition_1 = is_surrounded("{}") .. ' ? "<Right><BS><BS>"'
+local backspace_map_condition_2 = is_surrounded("[]") .. ' ? "<Right><BS><BS>"'
+local backspace_map_condition_3 = is_surrounded("()") .. ' ? "<Right><BS><BS>"'
+local backspace_map_condition_4 = is_surrounded("<>") .. ' ? "<Right><BS><BS>"'
+local backspace_map_conditions = table.concat({
+  backspace_map_condition_1,
+  backspace_map_condition_2,
+  backspace_map_condition_3,
+  backspace_map_condition_4
+}, " : ")
+local backspace_map_expression = backspace_map_conditions .. ' : "<BS>"'
+map("i", "<BS>", backspace_map_expression, true, true)
