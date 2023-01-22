@@ -7,6 +7,7 @@ local c = helpers.c
 o.number = true
 o.scrolloff = 10
 -- o.smarttab
+
 c [[
   set autoindent
   set tabstop=2 expandtab
@@ -32,3 +33,5 @@ o.fillchars = "eob: "
 -- Hide separator line
 o.fillchars:append({ vert = " " })
 o.updatetime = 300
+
+g.vim_json_conceal = 0

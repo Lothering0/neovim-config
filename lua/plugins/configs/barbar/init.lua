@@ -3,3 +3,4 @@ local get_path_to = helpers.get_config_path("barbar")
 
 require(get_path_to "setup")
 require(get_path_to "autocmds")
+require(get_path_to "mappings")

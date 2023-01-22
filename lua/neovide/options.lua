@@ -3,8 +3,6 @@ local g = helpers.g
 local o = helpers.o
 local c = helpers.c
 
-g.vim_json_conceal = 0
-
 -- Neovide
 c "set guifont=JetBrainsMonoNL\\ Nerd\\ Font:h11"
 g.neovide_hide_mouse_when_typing = true
