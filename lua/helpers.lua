@@ -51,6 +51,12 @@ local function if_surrounded(table, key_to_remap)
   return map("i", key_to_remap, expression, true)
 end
 
+local function get_config_path(folder)
+  return function(file)
+    return "plugins/configs/" .. folder .. "/" .. file
+  end
+end
+
 return {
   g = g,
   o = o,
@@ -58,6 +64,7 @@ return {
   map = map,
   augroup = augroup,
   autocmd = autocmd,
-  is_surrounded = is_surrounded
-  -- if_surrounded = if_surrounded
+  is_surrounded = is_surrounded,
+  -- if_surrounded = if_surrounded,
+  get_config_path = get_config_path
 }

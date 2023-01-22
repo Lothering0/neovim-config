@@ -1,11 +1,3 @@
-require("bufferline").setup({
-  icon_close_tab_modified = '•',
-  icon_custom_colors = false,
-  offsets = {
-    {filetype = "NvimTree", text = "File Explorer", text_align = "center"}
-  },
-})
-
 -- BARBAR plugin, offset for tabs to 20 symbols if NvimTree is toggled
 vim.api.nvim_create_autocmd('BufWinEnter', {
   pattern = '*',
