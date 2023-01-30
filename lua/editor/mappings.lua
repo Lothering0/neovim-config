@@ -17,6 +17,15 @@ map("i", "(", "()<left>")
 map("i", "[", "[]<left>")
 map("i", "{", "{}<left>")
 
+-- Comments
+map("i", "<C-_>", "<esc>maI// <esc>`a<Right><Right><Right>a", true)
+map("i", "<C-A-_>", "<esc>maI<esc>d3l`a<Left><Left><Left>a", true)
+
+map("n", "<C-_>", "<esc>maI// <esc>`a<Right><Right><Right>", true)
+map("n", "<C-A-_>", "<esc>maI<esc>d3l`a<Left><Left><Left>", true)
+
+map("v", "<C-_>", "o<esc>i/* <esc>gvO<Right><Right><Right><esc>a */<esc>gv<Right><Right><Right>", true)
+
 -- Enter
 local enter_map_condition_1 = is_surrounded("{}") .. ' ? "<cr><esc>O"'
 local enter_map_condition_2 = is_surrounded("()") .. ' ? "<cr><esc>O<tab>"'
