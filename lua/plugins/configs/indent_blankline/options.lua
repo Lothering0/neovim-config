@@ -2,8 +2,6 @@ local helpers = require("helpers")
 local o = helpers.o
 local g = helpers.g
 
-o.listchars:append "eol:↴"
-
 -- Scopes for indentations highlighter
 g.indent_blankline_context_patterns = {
   'class',
