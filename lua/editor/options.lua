@@ -20,7 +20,7 @@ c [[
 o.cursorline = true
 o.wrap = true
 o.breakindent = true
-o.listchars:append({ space = "·" })
+o.listchars:append({ space = "·", eol = "↴", trail = "·" })
 o.list = true
 o.termguicolors = true
 o.ignorecase = true
