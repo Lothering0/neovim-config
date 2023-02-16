@@ -2,6 +2,8 @@ local g = vim.g
 local o = vim.opt
 local c = vim.cmd
 
+local explorer_width = 20
+
 local function map(mode, key, v, noremap, expr)
   local noremap = noremap or true
   vim.api.nvim_set_keymap(mode, key, v, {
@@ -66,5 +68,6 @@ return {
   autocmd = autocmd,
   is_surrounded = is_surrounded,
   -- if_surrounded = if_surrounded,
-  get_config_path = get_config_path
+  get_config_path = get_config_path,
+  explorer_width = explorer_width
 }

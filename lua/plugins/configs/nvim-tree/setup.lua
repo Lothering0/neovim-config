@@ -1,12 +1,12 @@
+local explorer_width = require("helpers").explorer_width
+
 require("nvim-tree").setup({
-  open_on_setup = true,
-  open_on_setup_file = true,
   filters = {
     dotfiles = false,
     exclude = { "" }
   },
   view = {
-    width = 20,
+    width = explorer_width,
     hide_root_folder = true,
     mappings = {
       list = {
