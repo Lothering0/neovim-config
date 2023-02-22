@@ -4,6 +4,8 @@
   "diagnostic.infoSign": "i",
   "diagnostic.hintSign": "\uf834",
   "suggest.virtualText": true,
+  "tsserver.enable": false,
+  "volar.takeOverMode.enabled": true,
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de", //  sliders
     "variable": "\ue79b", //  isometric box
