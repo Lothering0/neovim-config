@@ -1,6 +1,7 @@
 return {
   meta = {
-    name = "material"
+    name = "material",
+    style = "deep_ocean"
   },
 
   -- Common colors
@@ -46,7 +47,8 @@ return {
   disabled =     '#464B5D',
   accent =       '#84FFFF',
   visual =       '#2d324a',
-  punctuation =  '#FFD700',
+  -- punctuation =  '#FFD700',
+  punctuation =  '#89DDFF',
 
   git = {
     added = '#ABCF76',
