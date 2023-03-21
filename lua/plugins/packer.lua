@@ -25,7 +25,7 @@ return require("packer").startup(function()
   use {
     "neoclide/coc.nvim",
     branch = "release",
-    run = ":CocInstall coc-highlight"
+    run = ":CocInstall coc-highlight coc-prettier"
   }
   use { "folke/noice.nvim" }               -- Plugin which replace native Neovim command line
   use { "MunifTanjim/nui.nvim" }           -- Required by Noice

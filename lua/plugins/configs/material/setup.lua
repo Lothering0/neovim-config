@@ -2,7 +2,7 @@ local colors = require("themes/init")
 
 require('material').setup({
   contrast = {
-    -- sidebars = true,
+    sidebars = true,
     -- floating_windows = true,
     -- non_current_windows = true,
     cursor_line = true,
@@ -77,7 +77,9 @@ require('material').setup({
     -- NvimTree
     NvimTreeFolderName = { fg = colors.folder or colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.folder or colors.accent },
-    NvimTreeCursorLine = { bg = colors.bg },
+    -- Contrast:
+    -- NvimTreeCursorLine = { bg = colors.bg },
+    NvimTreeCursorLine = { bg = colors.bg_alt },
     NvimTreeIndentMarker = { fg = colors.border },
 
     -- Telescope
@@ -119,13 +121,16 @@ require('material').setup({
     -- BufferCurrentSign = { fg = colors.accent },
     BufferCurrentSign = { fg = colors.accent },
     BufferInactiveSign = { fg = colors.bg, bg = colors.bg },
-    -- BufferTabpageFill = { fg = #1a1c25 },
-    BufferTabpageFill = { fg = colors.bg, bg = colors.bg },
+    -- Contrast:
+    -- BufferTabpageFill = { fg = colors.bg, bg = colors.bg },
+    BufferTabpageFill = { fg = colors.bg_alt, bg = colors.bg_alt },
     -- BufferTabpageFill = { fg = colors.bg, bg = colors.selection },
     BufferCurrent = { fg = colors.accent },
     BufferInactive = { bg = colors.bg },
     BufferInactiveMod = { bg = colors.bg, fg = colors.yellow },
-    BufferOffset = { fg = colors.bg, bg = colors.bg },
+    -- Contrast:
+    -- BufferOffset = { fg = colors.bg, bg = colors.bg },
+    BufferOffset = { fg = colors.bg_alt, bg = colors.bg_alt },
     BufferVisible = { fg = colors.accent },
     BufferVisibleSign = { fg = colors.accent, bg = colors.bg },
     BufferVisibleMod = { fg = colors.yellow },

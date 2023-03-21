@@ -2,7 +2,7 @@ local g = vim.g
 local o = vim.opt
 local c = vim.cmd
 
-local explorer_width = 20
+local explorer_width = 35
 
 local function map(mode, key, v, noremap, expr)
   local noremap = noremap or true
