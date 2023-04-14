@@ -1,5 +1,7 @@
+local VIRT_COLUMN = require("constants").VIRT_COLUMN
+
 -- vim.opt.colorcolumn = { 81 }
 require("virt-column").setup({
   char = "│",
-  virtcolumn = "81"
+  virtcolumn = tostring(VIRT_COLUMN)
 })

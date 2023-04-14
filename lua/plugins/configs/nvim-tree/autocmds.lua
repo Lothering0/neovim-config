@@ -1,8 +1,8 @@
-local explorer_width = require("helpers").explorer_width
+local EXPLORER_WIDTH = require("constants").EXPLORER_WIDTH
 
 local function open_nvim_tree(data)
   -- Make tabs offset
-  require("bufferline.api").set_offset(explorer_width)
+  require("bufferline.api").set_offset(EXPLORER_WIDTH)
   -- open the tree but don't focus it
   require("nvim-tree.api").tree.toggle({ focus = false })
 end

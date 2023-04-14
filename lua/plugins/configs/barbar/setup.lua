@@ -1,6 +1,10 @@
 require("bufferline").setup({
-  icon_close_tab_modified = '•',
   icon_custom_colors = false,
+  icons = {
+    modified = {
+      button = '•'
+    }
+  },
   offsets = {
     {
       filetype = "NvimTree",

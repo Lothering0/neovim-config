@@ -1,4 +1,4 @@
-local default_offset = require("helpers").explorer_width
+local DEFAULT_OFFSET = require("constants").EXPLORER_WIDTH
 
 local function set_offset(offset)
   if offset == 0 then
@@ -18,13 +18,13 @@ end
 
 -- Default offset for tabs
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
-  callback = set_offset(default_offset)
+  callback = set_offset(DEFAULT_OFFSET)
 })
 
 -- Offset for tabs if NvimTree is toggled
 vim.api.nvim_create_autocmd('BufWinEnter', {
   pattern = '*',
-  callback = set_offset(default_offset)
+  callback = set_offset(DEFAULT_OFFSET)
 })
 
 vim.api.nvim_create_autocmd('BufWinLeave', {

@@ -1,8 +1,13 @@
+local constants = require("constants")
+local IS_CONTRAST = constants.IS_CONTRAST
+local ALWAYS_SHOW_NON_TEXT = constants.ALWAYS_SHOW_NON_TEXT
+
+local ternary = require("helpers").ternary
 local colors = require("themes/init")
 
 require('material').setup({
   contrast = {
-    sidebars = true,
+    sidebars = IS_CONTRAST,
     -- floating_windows = true,
     -- non_current_windows = true,
     cursor_line = true,
@@ -77,9 +82,9 @@ require('material').setup({
     -- NvimTree
     NvimTreeFolderName = { fg = colors.folder or colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.folder or colors.accent },
-    -- Contrast:
-    -- NvimTreeCursorLine = { bg = colors.bg },
-    NvimTreeCursorLine = { bg = colors.bg_alt },
+    NvimTreeCursorLine = {
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
+    },
     NvimTreeIndentMarker = { fg = colors.border },
 
     -- Telescope
@@ -89,16 +94,19 @@ require('material').setup({
     -- IndentBlankLine
     IndentBlanklineChar = { fg = colors.active },
     IndentBlanklineContextChar = { fg = colors.fg },
-    IndentBlanklineSpaceChar = { fg = colors.active, nocombine = true },
-    IndentBlanklineContextSpaceChar = { fg = colors.active, nocombine = true },
+    IndentBlanklineSpaceChar = { fg = ternary(ALWAYS_SHOW_NON_TEXT, colors.active, colors.bg), nocombine = true },
+    IndentBlanklineContextSpaceChar = {
+      fg = ternary(ALWAYS_SHOW_NON_TEXT, colors.active, colors.bg),
+      nocombine = true
+    },
 
     -- Other
     -- MatchParen = { bg = colors.selection, bold = true }
     MatchParen = { bg = colors.selection },
     ColorColumn = { bg = colors.bg },
     VirtColumn = { fg = colors.virt_column or colors.active },
-    Whitespace = { fg = colors.active },
-    NonText = { fg = colors.active },
+    Whitespace = { fg = ternary(ALWAYS_SHOW_NON_TEXT, colors.active, colors.bg) },
+    NonText = { fg = ternary(ALWAYS_SHOW_NON_TEXT, colors.active, colors.bg) },
     YankedText = { fg = colors.bg, bg = colors.yellow },
 
     -- CoC Server
@@ -121,16 +129,18 @@ require('material').setup({
     -- BufferCurrentSign = { fg = colors.accent },
     BufferCurrentSign = { fg = colors.accent },
     BufferInactiveSign = { fg = colors.bg, bg = colors.bg },
-    -- Contrast:
-    -- BufferTabpageFill = { fg = colors.bg, bg = colors.bg },
-    BufferTabpageFill = { fg = colors.bg_alt, bg = colors.bg_alt },
+    BufferTabpageFill = {
+      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
+    },
     -- BufferTabpageFill = { fg = colors.bg, bg = colors.selection },
     BufferCurrent = { fg = colors.accent },
     BufferInactive = { bg = colors.bg },
     BufferInactiveMod = { bg = colors.bg, fg = colors.yellow },
-    -- Contrast:
-    -- BufferOffset = { fg = colors.bg, bg = colors.bg },
-    BufferOffset = { fg = colors.bg_alt, bg = colors.bg_alt },
+    BufferOffset = {
+      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
+    },
     BufferVisible = { fg = colors.accent },
     BufferVisibleSign = { fg = colors.accent, bg = colors.bg },
     BufferVisibleMod = { fg = colors.yellow },

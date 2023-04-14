@@ -1,4 +1,4 @@
-local explorer_width = require("helpers").explorer_width
+local EXPLORER_WIDTH = require("constants").EXPLORER_WIDTH
 
 require("nvim-tree").setup({
   filters = {
@@ -6,7 +6,7 @@ require("nvim-tree").setup({
     exclude = { "" }
   },
   view = {
-    width = explorer_width,
+    width = EXPLORER_WIDTH,
     hide_root_folder = true,
     mappings = {
       list = {
