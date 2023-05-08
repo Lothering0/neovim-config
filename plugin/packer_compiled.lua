@@ -169,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/danila/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-kitty"] = {
+    loaded = true,
+    path = "/home/danila/.local/share/nvim/site/pack/packer/start/vim-kitty",
+    url = "https://github.com/fladson/vim-kitty"
+  },
   ["vim-visual-multi"] = {
     loaded = true,
     path = "/home/danila/.local/share/nvim/site/pack/packer/start/vim-visual-multi",

@@ -29,4 +29,5 @@ return require("packer").startup(function()
   }
   use { "folke/noice.nvim" }               -- Plugin which replace native Neovim command line
   use { "MunifTanjim/nui.nvim" }           -- Required by Noice
+  use { "fladson/vim-kitty" }              -- Kitty configuration syntax highlighting
 end)
