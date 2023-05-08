@@ -85,6 +85,10 @@ require('material').setup({
     NvimTreeCursorLine = {
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
     },
+    NvimTreeCursorLineNr = {
+      fg = colors.cyan,
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+    },
     NvimTreeIndentMarker = { fg = colors.border },
 
     -- Telescope
@@ -92,8 +96,8 @@ require('material').setup({
     TelescopeSelection = { fg = colors.accent, bg = colors.selection },
 
     -- IndentBlankLine
-    IndentBlanklineChar = { fg = colors.active },
-    IndentBlanklineContextChar = { fg = colors.fg },
+    IndentBlanklineChar = { fg = colors.active, nocombine = true },
+    IndentBlanklineContextChar = { fg = colors.fg, nocombine = true },
     IndentBlanklineSpaceChar = { fg = ternary(ALWAYS_SHOW_NON_TEXT, colors.active, colors.bg), nocombine = true },
     IndentBlanklineContextSpaceChar = {
       fg = ternary(ALWAYS_SHOW_NON_TEXT, colors.active, colors.bg),

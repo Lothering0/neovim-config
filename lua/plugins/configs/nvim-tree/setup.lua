@@ -1,4 +1,6 @@
-local EXPLORER_WIDTH = require("constants").EXPLORER_WIDTH
+local constants = require("constants")
+local EXPLORER_WIDTH = constants.EXPLORER_WIDTH
+local EXPLORER_NUMBER = constants.EXPLORER_NUMBER
 
 require("nvim-tree").setup({
   filters = {
@@ -8,6 +10,8 @@ require("nvim-tree").setup({
   view = {
     width = EXPLORER_WIDTH,
     hide_root_folder = true,
+    number = EXPLORER_NUMBER,
+    relativenumber = EXPLORER_NUMBER,
     mappings = {
       list = {
         { key = "-", action = "" },
