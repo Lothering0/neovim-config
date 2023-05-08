@@ -9,14 +9,8 @@ require("nvim-tree").setup({
   },
   view = {
     width = EXPLORER_WIDTH,
-    hide_root_folder = true,
     number = EXPLORER_NUMBER,
     relativenumber = EXPLORER_NUMBER,
-    mappings = {
-      list = {
-        { key = "-", action = "" },
-      }
-    }
   },
   renderer = {
     --[[ indent_markers = {
@@ -30,6 +24,7 @@ require("nvim-tree").setup({
         none = "│",
       },
     }, --]]
+    root_folder_label = false,
     highlight_git = true,
     indent_width = 2,
     indent_markers = {
