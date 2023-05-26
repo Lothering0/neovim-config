@@ -1,4 +1,4 @@
 local path = "themes/"
 
 -- Curent theme
-return require(path .. "material_deep_ocean")
+return require(path .. "one_dark_darker")

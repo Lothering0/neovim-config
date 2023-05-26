@@ -16,7 +16,8 @@ require('lualine').setup {
           local mode = str:sub(1,1)
           if mode == "N" then
             set_CursorLineNr_color(colors.cyan)
-            return "ﲵ" end
+            -- return "ﲵ" end
+            return "" end
           if mode == "I" then
             set_CursorLineNr_color(colors.green)
             return ""
@@ -35,7 +36,22 @@ require('lualine').setup {
             return "" end
           return mode
         end
-      }
+      },
+    },
+    lualine_b = {
+      'branch',
+      {
+        'diff',
+        colored = true,
+        diff_color = {
+          added = 'LualineGitAdded',
+          modified = 'LualineGitModified',
+          removed = 'LualineGitDeleted'
+        },
+        -- symbols = { added = '  ', modified = '  ', removed = ' 󰆴 ' }
+        symbols = { added = '+', modified = '~', removed = '-' }
+      },
+      'diagnostics'
     },
     lualine_c = {},
     lualine_x = {},

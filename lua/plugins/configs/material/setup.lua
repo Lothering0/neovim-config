@@ -129,6 +129,11 @@ require('material').setup({
     GitGutterChange = { fg = colors.git.modified },
     GitGutterDelete = { fg = colors.git.removed },
 
+    -- Lualine git highlights 
+    LualineGitAdded = { fg = colors.git.added, bg = colors.contrast, bold = true },
+    LualineGitModified = { fg = colors.git.modified, bg = colors.contrast, bold = true },
+    LualineGitDeleted = { fg = colors.git.removed, bg = colors.contrast, bold = true },
+
     -- BARBAR
     -- BufferCurrentSign = { fg = colors.accent },
     BufferCurrentSign = { fg = colors.accent },
@@ -158,6 +163,6 @@ require('material').setup({
     NoiceCmdlinePopupBorder = { fg = colors.border },
     -- NoiceCmdlineIcon = { fg = colors.cyan },
     NoiceCmdlinePopupBorderSearch = { fg = colors.darkyellow },
-    NoiceCmdlineIconSearch = { fg = colors.darkyellow }
+    NoiceCmdlineIconSearch = { fg = colors.darkyellow },
   }
 })
