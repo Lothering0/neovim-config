@@ -80,6 +80,7 @@ require('material').setup({
     Function = { fg = colors.purple }--]]
 
     -- NvimTree
+    NvimTreeNormal = { bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg) },
     NvimTreeFolderName = { fg = colors.folder or colors.accent },
     NvimTreeOpenedFolderName = { fg = colors.folder or colors.accent },
     NvimTreeCursorLine = {
@@ -135,24 +136,36 @@ require('material').setup({
     LualineGitDeleted = { fg = colors.git.removed, bg = colors.contrast, bold = true },
 
     -- BARBAR
-    -- BufferCurrentSign = { fg = colors.accent },
-    BufferCurrentSign = { fg = colors.accent },
+    BufferCurrentSign = {
+      fg = ternary(IS_CONTRAST, colors.bg, colors.accent),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+    },
     BufferInactiveSign = { fg = colors.bg, bg = colors.bg },
     BufferTabpageFill = {
       fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
     },
-    -- BufferTabpageFill = { fg = colors.bg, bg = colors.selection },
     BufferCurrent = { fg = colors.accent },
-    BufferInactive = { bg = colors.bg },
-    BufferInactiveMod = { bg = colors.bg, fg = colors.yellow },
+    BufferInactive = {
+      bg = colors.bg,
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
+    },
+    BufferInactiveMod = { bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg), fg = colors.yellow },
+    BufferInactiveSign = {
+      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+    },
     BufferOffset = {
       fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
     },
     BufferVisible = { fg = colors.accent },
-    BufferVisibleSign = { fg = colors.accent, bg = colors.bg },
+    BufferVisibleSign = {
+      fg = ternary(IS_CONTRAST, colors.bg, colors.accent),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+    },
     BufferVisibleMod = { fg = colors.yellow },
+    BufferInactiveCHANGED = { fg = 'red' },
 
     -- EasyMotion
     -- EasyMotionTarget = { fg = colors.error, bold = true },
