@@ -140,6 +140,7 @@ require('material').setup({
       fg = ternary(IS_CONTRAST, colors.bg, colors.accent),
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
     },
+    BufferCurrentMod = { fg = colors.yellow, bg = colors.bg },
     BufferInactiveSign = { fg = colors.bg, bg = colors.bg },
     BufferTabpageFill = {
       fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
