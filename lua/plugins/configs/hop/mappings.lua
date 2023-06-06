@@ -1,5 +1,4 @@
 local helpers = require("helpers")
 local map = helpers.map
 
--- EasyMotion trigger
-map("", "-", "<Plug>(easymotion-s)")
+map("n", "-", ":HopChar1<CR>")

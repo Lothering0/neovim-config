@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/danila/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/danila/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/danila/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -158,11 +163,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/danila/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
-  },
-  ["vim-easymotion"] = {
-    loaded = true,
-    path = "/home/danila/.local/share/nvim/site/pack/packer/start/vim-easymotion",
-    url = "https://github.com/easymotion/vim-easymotion"
   },
   ["vim-gitgutter"] = {
     loaded = true,

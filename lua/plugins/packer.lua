@@ -10,8 +10,8 @@ return require("packer").startup(function()
   use { "kyazdani42/nvim-web-devicons" }                 -- Another icons
   use { "kyazdani42/nvim-tree.lua" }                     -- Explorer
   use { "romgrk/barbar.nvim" }                           -- Tabs
-  use { "easymotion/vim-easymotion" } -- EasyMotion
-  use { "mg979/vim-visual-multi", branch = "master" } -- Multi cursor
+  use { "phaazon/hop.nvim", branch = "v2" }              -- EasyMotion analog
+  use { "mg979/vim-visual-multi", branch = "master" }    -- Multi cursor
   use { "marko-cerovac/material.nvim" }                  -- FIRST Material theme
   use { "norcalli/nvim-colorizer.lua" }                  -- Color (hex/rgb) highlight
   use { "lukas-reineke/indent-blankline.nvim" }          -- Highlight indentations
