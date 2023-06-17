@@ -6,10 +6,13 @@ return require("packer").startup(function()
 
   -- You add plugins here  
   use { "nvim-lualine/lualine.nvim" }                    -- Bottom line
-  use { "ryanoasis/vim-devicons" }                       -- Icons
   use { "kyazdani42/nvim-web-devicons" }                 -- Another icons
   use { "kyazdani42/nvim-tree.lua" }                     -- Explorer
-  use { "romgrk/barbar.nvim" }                           -- Tabs
+  -- use { "romgrk/barbar.nvim" }                        -- Tabs
+  use {
+    "romgrk/barbar.nvim",
+    commit = "cefe44f5870ea02ab5ba6205d692cf87d5ed4b16",
+  }                                                      -- Tabs
   use { "phaazon/hop.nvim", branch = "v2" }              -- EasyMotion analog
   use { "mg979/vim-visual-multi", branch = "master" }    -- Multi cursor
   use { "marko-cerovac/material.nvim" }                  -- FIRST Material theme
@@ -25,7 +28,7 @@ return require("packer").startup(function()
   use {
     "neoclide/coc.nvim",
     branch = "release",
-    run = ":CocInstall coc-highlight coc-prettier"
+    run = ":CocInstall coc-highlight coc-prettier coc-eslint"
   }
   use { "folke/noice.nvim" }               -- Plugin which replace native Neovim command line
   use { "MunifTanjim/nui.nvim" }           -- Required by Noice

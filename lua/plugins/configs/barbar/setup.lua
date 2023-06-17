@@ -3,7 +3,6 @@ local ternary = require("helpers").ternary
 local IS_CONTRAST = constants.IS_CONTRAST
 
 require("bufferline").setup({
-  icon_custom_colors = false,
   icons = {
     modified = {
       button = '•'
