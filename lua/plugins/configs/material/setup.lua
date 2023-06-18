@@ -29,7 +29,7 @@ require('material').setup({
     clrs.backgrounds.sidebars = colors.bg
     clrs.backgrounds.floating_windows = colors.bg
     clrs.backgrounds.non_current_windows = colors.bg
-    clrs.backgrounds.cursor_line = colors.bg_alt
+    clrs.backgrounds.cursor_line = colors.contrast
 
     clrs.git.added = colors.darkgreen
 
@@ -66,6 +66,7 @@ require('material').setup({
     ["@operator"] = { fg = colors.operator or colors.cyan },
     ["@punctuation"] = { fg = colors.punctuation or colors.yellow },
     ["@punctuation.delimiter"] = { fg = colors.operator or colors.cyan },
+    ["@tag.delimiter"] = { fg = colors["tag.delimiter"] or colors.cyan },
     jsonNumber = { link = "@number" },
     jsonBoolean = { link = "@boolean" },
     jsonString = { link = "@string" },
@@ -81,9 +82,10 @@ require('material').setup({
     Conditional = { link = "@conditional" },
     Statement = { link = "@keyword" },
     -- CursorLineNr = { fg = colors.accent, bg = colors.bg_alt },
-    CursorLineNr = { fg = colors.text, bg = colors.bg_alt },
+    CursorLineNr = { fg = colors.text, bg = colors.contrast },
     -- Cursor = { fg = colors.bg, bg = colors.cursor },
     Visual = { fg = colors.none, bg = colors.visual },
+    Comment = { fg = colors.comments },
     --[[Type = { fg = colors.yellow },
     StorageClass = { fg = colors.yellow },
     Structure = { fg = colors.purple },
@@ -148,9 +150,9 @@ require('material').setup({
     GitGutterDelete = { fg = colors.git.removed },
 
     -- Lualine git highlights 
-    LualineGitAdded = { fg = colors.git.added, bg = colors.contrast, bold = true },
-    LualineGitModified = { fg = colors.git.modified, bg = colors.contrast, bold = true },
-    LualineGitDeleted = { fg = colors.git.removed, bg = colors.contrast, bold = true },
+    LualineGitAdded = { fg = colors.git.added, bg = colors.bg_alt, bold = true },
+    LualineGitModified = { fg = colors.git.modified, bg = colors.bg_alt, bold = true },
+    LualineGitDeleted = { fg = colors.git.removed, bg = colors.bg_alt, bold = true },
 
     -- BARBAR
     BufferCurrentSign = {

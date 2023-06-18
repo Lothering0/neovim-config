@@ -1,7 +1,7 @@
 local colors = require("themes/init")
 
 function set_CursorLineNr_color(color, bg_color)
-  bg = bg_color or colors.bg_alt
+  bg = bg_color or colors.contrast
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = color, bg = bg, bold = true })
 end
 
