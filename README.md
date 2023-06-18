@@ -6,7 +6,7 @@
 
 ## 2. Clone repository
 
-In ".config" directory cloning repository into "nvim" directory
+In ".config" directory clone repository into "nvim" directory
 
 ```sh
 cd ~/.config
