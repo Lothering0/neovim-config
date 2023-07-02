@@ -1,4 +1,5 @@
+local THEME = require("constants").THEME
 local path = "themes/"
 
 -- Curent theme
-return require(path .. "horizon")
+return require(path .. THEME)

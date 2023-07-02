@@ -37,7 +37,7 @@ return {
   bg_alt =       '#14151A',
   fg =           '#AAB1C0',
   text =         '#717CB4',
-  comments =     '#7f848e',
+  comments =     '#5c6370',
   selection =    '#353D4C',
   contrast =     '#14151A',
   active =       '#212428',

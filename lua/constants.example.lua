@@ -1,3 +1,5 @@
+-- Current theme. Full list of available themes you can find in lua/themes
+local THEME = "material_deep_ocean"
 -- Width of the sidebar (directiories tree)
 local EXPLORER_WIDTH = 32
 -- Show line numbers in explorer
