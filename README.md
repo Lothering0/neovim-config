@@ -18,7 +18,7 @@ git clone https://github.com/Lothering0/neovim-config.git nvim
 Copy from constants.example.lua file constants.lua
 
 ```sh
-cp ~/.config/nvim/constants.example.lua ~/.config/nvim/constants.lua
+cp ~/.config/nvim/lua/constants.example.lua ~/.config/nvim/lua/constants.lua
 ```
 
 ## 3. Install package manager Packer
