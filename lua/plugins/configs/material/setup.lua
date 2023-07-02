@@ -154,43 +154,11 @@ require('material').setup({
     LualineGitModified = { fg = colors.git.modified, bg = colors.bg_alt, bold = true },
     LualineGitDeleted = { fg = colors.git.removed, bg = colors.bg_alt, bold = true },
 
-    -- BARBAR
-    BufferCurrentSign = {
-      fg = ternary(IS_CONTRAST, colors.bg, colors.accent),
-      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
-    },
-    BufferCurrentMod = { fg = colors.yellow, bg = colors.bg },
-    BufferInactiveSign = { fg = colors.bg, bg = colors.bg },
-    BufferTabpageFill = {
+    -- BufferLine
+    BufferLineOffset = {
       fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
     },
-    BufferCurrent = { fg = colors.accent },
-    BufferInactive = {
-      bg = colors.bg,
-      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
-    },
-    BufferInactiveMod = { bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg), fg = colors.yellow },
-    BufferInactiveSign = {
-      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
-      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
-    },
-    BufferOffset = {
-      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
-      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
-    },
-    BufferVisible = { fg = colors.accent },
-    BufferVisibleSign = {
-      fg = ternary(IS_CONTRAST, colors.bg, colors.accent),
-      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
-    },
-    BufferVisibleMod = { fg = colors.yellow },
-    BufferInactiveCHANGED = { fg = 'red' },
-
-    -- EasyMotion
-    -- EasyMotionTarget = { fg = colors.error, bold = true },
-    -- EasyMotionTarget2First = { fg = colors.cursor, bold = true },
-    -- EasyMotionTarget2Second = { fg = colors.darkyellow }
 
     -- Noice
     NoiceCmdlinePopupBorder = { fg = colors.border },
