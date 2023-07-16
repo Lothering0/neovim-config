@@ -6,6 +6,8 @@ local map = helpers.map
 map("n", "<A-t>", "<Plug>(coc-type-definition)")
 -- Jump to definition
 map("n", "<A-d>", "<Plug>(coc-definition)")
+-- Rename symbol
+map("n", "<A-s>", "<Plug>(coc-rename)")
 -- Show suggestion window
 map("i", "<c-space>", "coc#refresh()", true, true)
 -- Confirm on enter
