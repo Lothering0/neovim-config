@@ -1,5 +1,11 @@
 require('telescope').setup{
   defaults = {
+    -- default is: { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
+    borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+    prompt_prefix = "   ",
+    selection_caret = " ",
+    prompt_title = "",
+    results_title = "",
     file_ignore_patterns = {
       "node_modules",
       "dist",

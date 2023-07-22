@@ -54,7 +54,13 @@ require('lualine').setup {
       'diagnostics'
     },
     lualine_c = {},
-    lualine_x = {},
+    lualine_x = {
+      {
+        require("noice").api.statusline.mode.get,
+        cond = require("noice").api.statusline.mode.has,
+        color = { fg = colors.orange },
+      }
+    },
     lualine_y = {
       {
         "filetype",

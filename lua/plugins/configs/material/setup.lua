@@ -22,7 +22,7 @@ require('material').setup({
     "nvim-web-devicons"
   },
   custom_colors = function(clrs)
-    if colors.meta.name == "material" then return end
+    -- if colors.meta.name == "material" then return end
 
     clrs.editor.bg = colors.bg
 
@@ -65,7 +65,7 @@ require('material').setup({
     ["@type.qualifier"] = { fg = colors.purple },
     ["@operator"] = { fg = colors.operator or colors.cyan },
     ["@punctuation"] = { fg = colors.punctuation or colors.yellow },
-    ["@punctuation.delimiter"] = { fg = colors.operator or colors.cyan },
+    ["@punctuation.delimiter"] = { fg = colors["punctuation.delimiter"] or colors.operator or colors.cyan },
     ["@tag.delimiter"] = { fg = colors["tag.delimiter"] or colors.cyan },
     jsonNumber = { link = "@number" },
     jsonBoolean = { link = "@boolean" },
@@ -111,9 +111,15 @@ require('material').setup({
     -- Telescope
     TelescopeSelectionCaret = { fg = colors.accent },
     TelescopeSelection = { fg = colors.accent, bg = colors.selection },
-    TelescopeNormal = { fg = colors.fg },
-    TelescopeResultsTitle = { link = "TelescopeNormal" },
-    TelescopePromptTitle = { link = "TelescopeNormal" },
+    TelescopeNormal = { fg = colors.fg, bg = colors.bg_alt },
+    TelescopePromptNormal = { fg = colors.fg, bg = colors.contrast },
+    TelescopePromptBorder = { fg = colors.contrast, bg = colors.contrast },
+    TelescopePreviewNormal = { bg = colors.bg },
+    TelescopePreviewBorder = { fg = colors.bg, bg = colors.bg },
+    TelescopeResultsNormal = { bg = colors.bg_alt },
+    TelescopeResultsBorder = { bg = colors.bg_alt },
+    TelescopePreviewTitle = { link = "TelescopePreviewNormal" },
+    TelescopePromptTitle = { fg = colors.contrast },
 
     -- IndentBlankLine
     IndentBlanklineChar = { fg = colors.active, nocombine = true },
@@ -161,8 +167,8 @@ require('material').setup({
     },
 
     -- Noice
+    NoiceCmdlinePopup = { bg = colors.contrast },
     NoiceCmdlinePopupBorder = { fg = colors.border },
-    -- NoiceCmdlineIcon = { fg = colors.cyan },
     NoiceCmdlinePopupBorderSearch = { fg = colors.darkyellow },
     NoiceCmdlineIconSearch = { fg = colors.darkyellow },
   }
