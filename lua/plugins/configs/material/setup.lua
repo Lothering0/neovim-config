@@ -165,6 +165,10 @@ require('material').setup({
       fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
     },
+    BufferLineFill = {
+      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
+    },
 
     -- Noice
     NoiceCmdlinePopup = { bg = colors.contrast },
