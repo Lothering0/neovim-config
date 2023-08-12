@@ -60,6 +60,8 @@ return {
   floating_window              = '#212428',
   floating_window_current_line = '#2E3137',
 
+  string_bg = '#181F1E',
+
   git = {
     added = '#98c379',
     modified = '#52ADF2',

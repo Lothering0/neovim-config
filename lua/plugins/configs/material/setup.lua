@@ -1,6 +1,7 @@
 local constants = require("constants")
 local IS_CONTRAST = constants.IS_CONTRAST
 local ALWAYS_SHOW_NON_TEXT = constants.ALWAYS_SHOW_NON_TEXT
+local HAS_STRING_BACKGROUND = constants.HAS_STRING_BACKGROUND
 
 local ternary = require("helpers").ternary
 local colors = require("themes/init")
@@ -59,7 +60,7 @@ require('material').setup({
     ["@parameter"] = { fg = colors.orange },
     ["@parameter.reference"] = { fg = colors.orange },
     ["@repeat"] = { fg = colors.purple },
-    ["@string"] = { fg = colors.darkgreen },
+    ["@string"] = { fg = colors.darkgreen, bg = ternary(HAS_STRING_BACKGROUND, colors.string_bg, nil) },
     ["@include"] = { fg = colors.purple },
     ["@property"] = { fg = colors.property or colors.gray },
     ["@type.qualifier"] = { fg = colors.purple },

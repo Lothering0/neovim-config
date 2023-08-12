@@ -10,6 +10,8 @@ local VIRT_COLUMN = 121
 local IS_CONTRAST = true
 -- Determines is non-text (like whitespaces and linebreaks) should always be visible or only when selected or is current line
 local ALWAYS_SHOW_NON_TEXT = false
+-- Should string literals has a background
+local HAS_STRING_BACKGROUND = true
 
 return {
   THEME = THEME,
@@ -17,5 +19,6 @@ return {
   EXPLORER_NUMBER = EXPLORER_NUMBER,
   VIRT_COLUMN = VIRT_COLUMN,
   IS_CONTRAST = IS_CONTRAST,
-  ALWAYS_SHOW_NON_TEXT = ALWAYS_SHOW_NON_TEXT
+  ALWAYS_SHOW_NON_TEXT = ALWAYS_SHOW_NON_TEXT,
+  HAS_STRING_BACKGROUND = HAS_STRING_BACKGROUND,
 }
