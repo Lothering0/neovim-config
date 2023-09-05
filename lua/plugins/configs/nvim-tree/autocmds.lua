@@ -1,5 +1,3 @@
-local EXPLORER_WIDTH = require("constants").EXPLORER_WIDTH
-
 local function open_nvim_tree(data)
   -- open the tree but don't focus it
   require("nvim-tree.api").tree.toggle({ focus = false })
