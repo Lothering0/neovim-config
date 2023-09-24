@@ -2,7 +2,7 @@
   "diagnostic.errorSign": "✖",
   "diagnostic.warningSign": "!",
   "diagnostic.infoSign": "i",
-  "diagnostic.hintSign": "\uf834",
+  "diagnostic.hintSign": "\udb80\udf36",
   "suggest.virtualText": true,
   "tsserver.enable": false,
   "volar.takeOverMode.enabled": true,

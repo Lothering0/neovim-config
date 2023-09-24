@@ -108,6 +108,7 @@ require('material').setup({
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
     },
     NvimTreeIndentMarker = { fg = colors.border },
+    NvimTreeGitIgnored = { fg = colors.git.ignored or nil },
 
     -- Telescope
     TelescopeSelectionCaret = { fg = colors.accent },
@@ -150,6 +151,7 @@ require('material').setup({
     CocMenuSel = { bg = colors.floating_window_current_line or colors.visual },
     CocFloatThumb = { bg = colors.fg },
     CocHighlightText = { bg = colors.selection },
+    CocUnusedHighlight = { fg = colors.unused or nil },
 
     -- GitGutter highlights
     GitGutterAdd = { fg = colors.git.added },
@@ -160,6 +162,20 @@ require('material').setup({
     LualineGitAdded = { fg = colors.git.added, bg = colors.bg_alt, bold = true },
     LualineGitModified = { fg = colors.git.modified, bg = colors.bg_alt, bold = true },
     LualineGitDeleted = { fg = colors.git.removed, bg = colors.bg_alt, bold = true },
+    lualine_b_diagnostics_warn_normal = { fg = colors.darkyellow, bg = colors.bg_alt },
+    lualine_b_diagnostics_warn_insert = { link = "lualine_b_diagnostics_warn_normal" },
+    lualine_b_diagnostics_warn_visual = { link = "lualine_b_diagnostics_warn_normal" },
+    lualine_b_diagnostics_warn_replace = { link = "lualine_b_diagnostics_warn_normal" },
+    lualine_b_diagnostics_warn_command = { link = "lualine_b_diagnostics_warn_normal" },
+    lualine_b_diagnostics_warn_inactive = { link = "lualine_b_diagnostics_warn_normal" },
+    lualine_b_diagnostics_warn_terminal = { link = "lualine_b_diagnostics_warn_normal" },
+    lualine_b_diagnostics_hint_normal = { fg = colors.darkpurple, bg = colors.bg_alt },
+    lualine_b_diagnostics_hint_insert = { link = "lualine_b_diagnostics_hint_normal" },
+    lualine_b_diagnostics_hint_visual = { link = "lualine_b_diagnostics_hint_normal" },
+    lualine_b_diagnostics_hint_replace = { link = "lualine_b_diagnostics_hint_normal" },
+    lualine_b_diagnostics_hint_command = { link = "lualine_b_diagnostics_hint_normal" },
+    lualine_b_diagnostics_hint_inactive = { link = "lualine_b_diagnostics_hint_normal" },
+    lualine_b_diagnostics_hint_terminal = { link = "lualine_b_diagnostics_hint_normal" },
 
     -- BufferLine
     BufferLineOffset = {

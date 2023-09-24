@@ -41,7 +41,7 @@ return {
   contrast =     '#EAEAEA',
   active =       '#DEDEDE',
   virt_column =  '#DEDEDE',
-  border =       '#3B3E44',
+  border =       '#DEDEDE',
   line_numbers = '#CCCCCC',
   highlight =    '#EDEEEE',
   disabled =     '#464B5D',
@@ -54,6 +54,7 @@ return {
   operator =     '#333333',
   ["keyword.operator"] = '#821EB8',
   ["tag.delimiter"] = '#AC455F',
+  unused =       '#CCCCCC',
   folder =       '#BBBBBB',
 
   floating_window              = '#E4E6E7',
@@ -62,6 +63,7 @@ return {
   git = {
     added = '#2CA860',
     modified = '#24A2AF',
-    removed = '#DC6068'
+    removed = '#DC6068',
+    ignored = '#DEDEDE',
   },
 }

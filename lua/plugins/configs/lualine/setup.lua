@@ -24,7 +24,7 @@ require('lualine').setup {
           end
           if mode == "V" then
             set_CursorLineNr_color(colors.purple, colors.bg)
-            return "" end
+            return "󰈈" end
           if mode == "R" then
             set_CursorLineNr_color(colors.red)
             return "" end
