@@ -1,2 +1,4 @@
 require("plugins/packer")
-require("plugins/configs/init")
+require("plugins/configs/material/init")
+
+return { plugins = require("plugins/configs/init") }
