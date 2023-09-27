@@ -1,4 +1,10 @@
 require("plugins/packer")
-require("plugins/configs/material/init")
+local lume = require('lume')
 
-return { plugins = require("plugins/configs/init") }
+return {
+  plugins = lume.merge(
+    { material = require("plugins/configs/material/init") },
+    require("plugins/configs/init"),
+    { bufferline = require("plugins/configs/bufferline/init") }
+  ),
+}

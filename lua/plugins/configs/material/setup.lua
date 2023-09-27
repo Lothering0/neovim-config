@@ -46,7 +46,7 @@ require('material').setup({
   custom_highlights = lume.merge(
     editor.highlights.get_highlights(colors),
     -- TODO: try to do loop over this plugins. DRY
-    plugins.bufferline.highlights.get_highlights(colors),
+    require("plugins/configs/bufferline/highlights").get_highlights(colors),
     plugins.coc.highlights.get_highlights(colors),
     plugins.gitgutter.highlights.get_highlights(colors),
     plugins.indent_blankline.highlights.get_highlights(colors),

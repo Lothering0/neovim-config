@@ -2,10 +2,10 @@ local function get_path(plugin)
   return "plugins/configs/" .. plugin .. "/init"
 end
 
--- Material plugin is required in the upper module in plugins/init.lua
+-- Material and Bufferline plugins are required in the upper module in plugins/init.lua
+-- Bufferline plugin is important to be required after Material plugin
 
 return {
-  bufferline = require(get_path "bufferline"),
   coc = require(get_path "coc"),
   colorizer = require(get_path "colorizer"),
   emmet = require(get_path "emmet"),
