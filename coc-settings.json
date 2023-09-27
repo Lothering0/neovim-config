@@ -20,13 +20,13 @@
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de", //  sliders
     "variable": "\ue79b", //  isometric box
-    "value": "\uf89f", //  digits 123
+    "value": "\udb80\udfa0", // 󰎠 digits 123
     "operator": "\u03a8", // Ψ greek letter psi
     "constructor": "\uf0ad", //  wrench
     "function": "\u0192", // ƒ latin small letter F
     "reference": "\ue79b", //  retweet symbol
-    "constant": "\uf8fe", //  greek letter pi
-    "method": "\uf794", //  mdi-function "f"
+    "constant": "\udb80\udfff", // 󰏿 greek letter pi
+    "method": "\udb80\ude95", // 󰊕 mdi-function "f"
     "struct": "\ufb44", // פּ file tree
     "class": "\uf0e8", //  hierarchy / site map
     "interface": "\uf417", //  git commit / line interrupted by circle
@@ -42,7 +42,7 @@
     "file": "\uf15b", //  file / blank page
     "folder": "\uf07b", //  folder
     "snippet": "\ue60b", //  pair of curly braces
-    "typeParameter": "\uf728", //  file presentation box
+    "typeParameter": "\udb80\ude29", // 󰈩 file presentation box
     "default": "\uf29c" //  question mark in circle
   }
 }
