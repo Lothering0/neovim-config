@@ -48,7 +48,7 @@ return {
   disabled =     '#464B5D',
   accent =       '#26A2AB',
   visual =       '#2d324a',
-  punctuation =  '#26A2AB',
+  ["@punctuation"] =  '#26A2AB',
 
   git = {
     added = '#64992A',

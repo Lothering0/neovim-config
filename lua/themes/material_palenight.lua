@@ -47,10 +47,10 @@ return {
   disabled =     '#464B5D',
   accent =       '#6CDFFF',
   visual =       '#404764',
-  property =     '#7884EE',
-  operator =     '#BE81DA',
-  punctuation =  '#6CDFFF',
-  ["punctuation.delimiter"] =  '#6CDFFF',
+  ["@property"] =     '#7884EE',
+  ["@operator"] =     '#BE81DA',
+  ["@punctuation"] =  '#6CDFFF',
+  ["@punctuation.delimiter"] =  '#6CDFFF',
   string_bg =    '#2f3f44',
 
   git = {
