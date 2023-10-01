@@ -12,6 +12,12 @@ local function get_highlights(colors)
       fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)
     },
+    BufferLineSeparator = {
+      fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+      bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
+    },
+    BufferLineSeparatorSelected = { fg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg)  },
+    BufferLineSeparatorVisible = { link = "BufferLineSeparatorSelected" },
   }
 end
 
