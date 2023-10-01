@@ -1,3 +1,5 @@
+local ternary = require("helpers").ternary
+
 local function get_highlights(colors)
   return {
     CocFloating = { bg = colors.floating_window or colors.selection },
@@ -9,7 +11,7 @@ local function get_highlights(colors)
     CocMenuSel = { bg = colors.floating_window_current_line or colors.visual },
     CocFloatThumb = { bg = colors.fg },
     CocHighlightText = { bg = colors.selection },
-    CocUnusedHighlight = { fg = colors.unused or nil },
+    CocUnusedHighlight = ternary(colors.unused, { fg = colors.unused }),
   }
 end
 
