@@ -1,6 +1,7 @@
 return {
   meta = {
-    name = "tokyo-night"
+    name = "tokyo-night",
+    style = "dark",
   },
 
   -- Common colors
