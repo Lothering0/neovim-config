@@ -44,5 +44,13 @@
     "snippet": "\ue60b", //  pair of curly braces
     "typeParameter": "\udb80\ude29", // 󰈩 file presentation box
     "default": "\uf29c" //  question mark in circle
+  },
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
+    }
   }
 }

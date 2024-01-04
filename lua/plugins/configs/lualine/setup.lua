@@ -81,6 +81,7 @@ require('lualine').setup {
           if lang == "cpp" then return "C++" end
           if lang == "c" then return "C" end
           if lang == "php" then return "PHP" end
+          if lang == "haskell" then return "Haskell" end
           return lang
         end
       }
