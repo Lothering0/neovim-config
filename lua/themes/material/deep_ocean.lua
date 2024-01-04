@@ -49,6 +49,7 @@ return {
   visual =       '#2d324a',
   -- ["@punctuation"] =  '#FFD700',
   ["@punctuation"] =  '#89DDFF',
+  ["@operator"] =     '#B480D6',
 
   git = {
     added = '#ABCF76',
