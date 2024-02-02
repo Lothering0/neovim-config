@@ -17,6 +17,7 @@ local function get_highlights(colors)
     ["@variable.builtin"]      = { fg = colors["@variable.builtin"] or colors.error },
     ["@variable"]              = { fg = colors["@variable"] or colors.fg },
     ["@keyword"]               = { fg = colors["@keyword"] or colors.purple },
+    ["@keyword.import"]        = { fg = colors["@keyword.import"] or colors["@keyword"] or colors.purple },
     ["@keyword.operator"]      = { fg = colors["@keyword.operator"] or colors.cyan },
     ["@exception"]             = { fg = colors["@exception"] or colors.purple },
     ["@parameter"]             = { fg = colors["@parameter"] or colors.orange },
