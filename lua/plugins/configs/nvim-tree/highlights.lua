@@ -15,6 +15,10 @@ local function get_highlights(colors)
       bg = ternary(IS_CONTRAST, colors.bg_alt, colors.bg),
     },
     NvimTreeIndentMarker = { fg = colors.border },
+    NvimTreeExecFile = { link = 'Normal' },
+    NvimTreeGitFileNewHL = { fg = colors.yellow },
+    NvimTreeGitFileDirtyHL = { fg = colors.blue },
+    NvimTreeGitFileDeletedHL = { fg = colors.red },
     NvimTreeGitIgnored = ternary(colors.git.ignored, { fg = colors.git.ignored }),
   }
 end
