@@ -1,40 +1,69 @@
 local colors = require("themes/init")
 
-function set_CursorLineNr_color(color, bg_color)
+function set_mode_color(color, bg_color)
   bg = bg_color or colors.contrast
+  vim.api.nvim_set_hl(0, "LualineMode", { fg = color, bg = colors.highlight })
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = color, bg = bg, bold = true })
 end
 
+local modes = {
+  default = {
+    fg = colors.cyan,
+    symbol = "?",
+  },
+  -- Normal
+  N = {
+    fg = colors.cyan,
+    symbol = "",
+  },
+  -- Insert
+  I = {
+    fg = colors.green,
+    symbol = "",
+  },
+  -- Visual
+  V = {
+    fg = colors.purple,
+    bg = colors.bg,
+    symbol = "󰈈",
+  },
+  -- Replace
+  R = {
+    fg = colors.red,
+    symbol = "",
+  },
+  -- O-Pending
+  O = {
+    fg = colors.accent,
+    symbol = "󰞌",
+  },
+  -- Command
+  C = {
+    fg = colors.darkyellow,
+    symbol = "",
+  },
+}
+
 require('lualine').setup {
   icons_enabled = false,
-  options = { globalstatus = true },
+  options = {
+    globalstatus = true,
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    -- section_separators = { left = '', right = ''},
+    -- section_separators = { left = ' ', right = ' '},
+  },
   sections = {
     lualine_a = {
       {
         'mode',
+        color = 'LualineMode',
+        separator = { left = '', right = ''},
         fmt = function(str)
-          local mode = str:sub(1,1)
-          if mode == "N" then
-            set_CursorLineNr_color(colors.cyan)
-            -- return "ﲵ" end
-            return "" end
-          if mode == "I" then
-            set_CursorLineNr_color(colors.green)
-            return ""
-          end
-          if mode == "V" then
-            set_CursorLineNr_color(colors.purple, colors.bg)
-            return "󰈈" end
-          if mode == "R" then
-            set_CursorLineNr_color(colors.red)
-            return "" end
-          if mode == "O" then
-            set_CursorLineNr_color(colors.accent)
-            return "ﲊ" end
-          if mode == "C" then
-            set_CursorLineNr_color(colors.darkyellow)
-            return "" end
-          return mode
+          local mode_name = str:sub(1,1)
+          local mode = modes[mode_name] or modes.default
+          set_mode_color(mode.fg, mode.bg)
+          return mode.symbol or mode_name
         end
       },
     },

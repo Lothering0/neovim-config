@@ -17,6 +17,8 @@ local function get_highlights(colors)
     lualine_b_diagnostics_hint_command = { link = "lualine_b_diagnostics_hint_normal" },
     lualine_b_diagnostics_hint_inactive = { link = "lualine_b_diagnostics_hint_normal" },
     lualine_b_diagnostics_hint_terminal = { link = "lualine_b_diagnostics_hint_normal" },
+    -- Left separator of A section
+    lualine_transitional_lualine_a_mode_to_StatusLine = { bg = colors.bg },
   }
 end
 
