@@ -1,8 +1,19 @@
 local colors = require("themes/init")
+local is_hl_set = 0
 
 function set_mode_color(color, bg_color)
   bg = bg_color or colors.contrast
-  vim.api.nvim_set_hl(0, "LualineMode", { fg = color, bg = colors.highlight })
+
+  -- Left separator of A section. Hack
+  if is_hl_set < 2 then
+    vim.api.nvim_set_hl(0, "lualine_transitional_lualine_a_mode_to_StatusLine", {
+      fg = colors.selection,
+      bg = colors.bg
+    })
+    is_hl_set = is_hl_set + 1
+  end
+
+  vim.api.nvim_set_hl(0, "LualineMode", { fg = color, bg = colors.selection })
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = color, bg = bg, bold = true })
 end
 
@@ -114,6 +125,6 @@ require('lualine').setup {
           return lang
         end
       }
-    }
+    },
   }
 }
