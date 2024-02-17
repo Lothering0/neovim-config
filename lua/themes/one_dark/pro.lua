@@ -1,7 +1,7 @@
 return {
   meta = {
     name = "one_dark",
-    style = "darker"
+    style = "pro"
   },
 
   -- Common colors
@@ -10,21 +10,21 @@ return {
   black =    '#000000',
   red =      '#F07178',
   green =    '#98c379',
-  yellow =   '#D8985F',
-  blue =     '#52ADF2',
-  paleblue = '#52ADF2',
-  cyan =     '#52ADF2',
-  purple =   '#D55FDE',
+  yellow =   '#E5C07B',
+  blue =     '#61AFEF',
+  paleblue = '#61AFEF',
+  cyan =     '#61AFEF',
+  purple =   '#C678DD',
   orange =   '#EF596F',
   pink =     '#E06C75',
 
   -- Dark colors
   darkred =    '#DC6068',
   darkgreen =  '#98c379',
-  darkyellow = '#D8985F',
-  darkblue =   '#52ADF2',
-  darkcyan =   '#52ADF2',
-  darkpurple = '#D55FDE',
+  darkyellow = '#E5C07B',
+  darkblue =   '#61AFEF',
+  darkcyan =   '#61AFEF',
+  darkpurple = '#C678DD',
   darkorange = '#EF596F',
 
   error =  '#EF596F',
@@ -33,16 +33,16 @@ return {
   title =  '#EEFFFF',
 
   none =         'NONE',
-  bg =           '#181A1F',
-  bg_alt =       '#14151A',
+  bg =           '#23272E',
+  bg_alt =       '#1e2227',
   fg =           '#AAB1C0',
   text =         '#717CB4',
   comments =     '#5c6370',
   selection =    '#353D4C',
-  contrast =     '#14151A',
-  active =       '#212428',
-  virt_column =  '#2E3137',
-  border =       '#2E3137',
+  contrast =     '#2c313c',
+  active =       '#44484e',
+  virt_column =  '#44484e',
+  border =       '#44484e',
   line_numbers = '#495162',
   highlight =    '#282C34',
   disabled =     '#464B5D',
@@ -51,17 +51,17 @@ return {
   ["@variable"] =     '#f5c876',
   ["@punctuation"] =  '#AAB1C0',
   ["@punctuation.delimiter"] =  '#AAB1C0',
-  ["@function"] = '#52ADF2',
-  ["@property"] =     '#EF596F',
+  ["@function"] = '#61AFEF',
+  ["@property"] =     '#E06C75',
   ["@operator"] =     '#33d8e4',
-  ["@keyword.operator"] = '#D55FDE',
+  ["@keyword.operator"] = '#C678DD',
   -- folder =       '#AAB1C0',
   folder =       '#DDDDDD',
 
-  floating_window              = '#212428',
-  floating_window_current_line = '#2E3137',
+  floating_window              = '#1e2227',
+  floating_window_current_line = '#2c313a',
 
-  string_bg = '#181F1E',
+  string_bg = '#283122',
 
   git = {
     added = '#98c379',

@@ -33,6 +33,7 @@ local function get_highlights(colors)
     ["@constructor"]           = { fg = colors["@constructor"] or nil },
     ["@operator"]              = { fg = colors["@operator"] or colors.cyan },
     ["@punctuation"]           = { fg = colors["@punctuation"] or colors.yellow },
+    ["@punctuation.bracket"]   = { fg = colors["@punctuation"] or colors.white },
     ["@punctuation.delimiter"] = { fg = colors["@punctuation.delimiter"] or colors.operator or colors.cyan },
     ["@tag"]                   = { fg = colors["@tag"] or colors.darkred },
     ["@tag.delimiter"]         = { fg = colors["@tag.delimiter"] or colors.cyan },
