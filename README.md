@@ -1,3 +1,6 @@
+# :warning: DEPRECATED
+Repository was archived. Actual config you can find [here](https://github.com/Lothering0/dotfiles/tree/main/nvim).
+
 # neovim-config
 
 ## 1. Neovim installation
